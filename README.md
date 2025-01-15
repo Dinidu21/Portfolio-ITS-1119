@@ -19,7 +19,7 @@ In this document, I define the primary goals and objectives of the website, ensu
 ### ✏️ [Wireframe (Draw.io)](https://drive.google.com/file/d/1_pI4OVpEHZ-6fT8Vuj2s-j2oXuuRIeKO/view)
 The wireframe provides a basic layout and structure, laying the groundwork for the website's design.
 
-### 🎨 [Mockups (Figma)](https://www.figma.com/)
+### 🎨 [Mockups (Figma)](https://www.figma.com/design/k95zqiEoXC0Gh1bMSoe78u/ITS-1119-Module-Portfolio-Wireframe?node-id=0-1&t=kSIK5tgGkjKnNBnD-1)
 The Figma mockups illustrate a polished visual representation of the final website design.
 
 ---
