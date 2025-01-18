@@ -16,6 +16,9 @@ Welcome to my **Portfolio Website**! This project showcases my journey, skills, 
 ### 🎯 [Goal Identification](https://docs.google.com/document/d/1XRMIW2hp_L6GXnWb5WQklmUd8v8fg_YUw2B6FbTKcvw/edit?tab=t.0#heading=h.is6ggbiknheu)
 In this document, I define the primary goals and objectives of the website, ensuring a focused and clear direction.
 
+### 🗺️ [SiteMap](https://drive.google.com/file/d/1fFu4_0HJ9-9_USF7IE4DOQcq4Z7qh0un/view?usp=sharing)
+In this document, I define the Site map for the website.
+
 ### ✏️ [Wireframe (Draw.io)](https://drive.google.com/file/d/1_pI4OVpEHZ-6fT8Vuj2s-j2oXuuRIeKO/view)
 The wireframe provides a basic layout and structure, laying the groundwork for the website's design.
 
