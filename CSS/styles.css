@@ -159,3 +159,92 @@ a:hover {
     font-size: 30px;
     color: #ffffff;
 }
+
+p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #5b5b5b;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+h1 {
+    color: #212121;
+    font-size: 2.8em;
+    margin: 24px 0;
+}
+
+h2 {
+    color: #353535;
+    font-size: 2.4em;
+    font-weight: bold;
+}
+
+h3 {
+    color: #484848;
+}
+
+h3, b, strong {
+    font-weight: bold;
+}
+
+.custom-btn {
+    background: #eee;
+    color: #5b5b5b;
+    font-weight: bold;
+    border-radius: 50px;
+    padding: 13px 29px;
+    font-size: 14px;
+    line-height: normal;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+.custom-btn:hover {
+    color: #ffc200;
+}
+.custom-btn.custom-btn-bg {
+    background: #474559;
+    color: #ffffff;
+}
+.custom-btn.custom-btn-bg:hover {
+    background: #ffc200;
+    color: #ffffff !important;
+}
+
+.animated {
+    position: relative;
+}
+
+.animated-info {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 5px;
+    min-width: 260px;
+    position: relative;
+}
+
+.animated-item {
+    color: #ffc200;
+}
+
+.animated-item {
+    font-size: 38px;
+    line-height: inherit;
+    display: block;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+.animated-item:nth-child(2n+2) {
+    animation-delay: 2s;
+}
+.animated-item:nth-child(3n+3) {
+    animation-delay: 4s;
+}
