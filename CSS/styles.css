@@ -350,3 +350,31 @@ h3, b, strong {
     vertical-align: middle;
     margin-left: 15px;
 }
+.dark-mode {
+    background: #0c0c0d;
+}
+.dark-mode .navbar-light .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+}
+.dark-mode .navbar-light .navbar-nav .nav-link:hover {
+    color: #ffc200;
+}
+.dark-mode .navbar[class*="headroom--not-top"] {
+    background: #0c0c0d;
+    border-bottom: 1px solid #1f1f1f;
+}
+.dark-mode .small-text {
+    background: #0d0c15;
+    color: #ffffff;
+}
+.dark-mode .feature-card .uil,
+.dark-mode .navbar-light .navbar-brand,
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6,
+.dark-mode .color-mode {
+    color: #ffffff;
+}
+.dark-mode .owl-carousel .owl-nav button.owl-next,
+.dark-mode .owl-carousel .owl-nav button.owl-prev,
+.dark-mode .owl-carousel button.owl-dot {
+    color: #ffffff;
+}
