@@ -503,3 +503,37 @@ h3, b, strong {
     padding-left: 15px;
     padding-right: 15px;
 }
+.social-links {
+    margin-top: 15px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px;
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon.linkedin {
+    color: #0077b5;
+}
+.social-icon.youtube {
+    color: #FF0000; /
+}
+.social-icon.github {
+    color: white;
+}
+.social-icon.medium {
+    color: #00ab6c;
+}
+.social-icon.hackerrank {
+    color: #2EC866;
+}
+.social-icon.leetcode {
+    color: #f9a826;
+}
+.social-icon:hover {
+    transform: scale(1.1);
+    color: #ffcc00;
+}
