@@ -378,3 +378,47 @@ h3, b, strong {
 .dark-mode .owl-carousel button.owl-dot {
     color: #ffffff;
 }
+.owl-carousel .owl-nav span {
+    display: none;
+}
+.owl-carousel .owl-nav .owl-prev:before,
+.owl-carousel .owl-nav .owl-next:before {
+    background: none;
+    padding: 0;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-family: 'Poppins', sans-serif;
+    font-size: 100px;
+    line-height: normal;
+}
+.owl-carousel .owl-nav .owl-prev:before {
+    content: '\e833';
+    left: -45px;
+}
+.owl-carousel .owl-nav .owl-next:before {
+    content: '\e836';
+    right: -45px;
+}
+
+.owl-theme .owl-nav [class*=owl-] {
+    background: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+}
+.owl-theme .owl-nav [class*=owl-]:hover {
+    color: #ffc200;
+}
+.owl-theme .owl-dots .owl-dot {
+    outline: none;
+}
+.owl-theme .owl-dots .owl-dot span {
+    width: 8px;
+    height: 8px;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: #5b5b5b;
+}
