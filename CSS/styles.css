@@ -422,3 +422,43 @@ h3, b, strong {
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
     background: #5b5b5b;
 }
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.animated-text h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.custom-btn-group {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: black;
+    transition: all 0.3s;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.custom-btn-bg {
+    background-color: black;
+    color: white;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
