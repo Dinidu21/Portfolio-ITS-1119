@@ -1,5 +1,5 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
 }
 
@@ -202,7 +202,6 @@ body {
 .google-map iframe {
   width: 100%;
 }
-
 .contact-form {
   position: relative;
 }
@@ -232,7 +231,6 @@ body {
 .contact-form .submit-btn:hover {
   background: #474559;
 }
-
 .contact-info {
   background: #474559;
   border-radius: 0 0 3px 3px;
@@ -254,7 +252,7 @@ body {
 }
 .timeline-wrapper:before {
   content: "";
-  background: #474559;
+  background: #3f5efb;
   width: 3px;
   height: 100%;
   position: absolute;
@@ -262,7 +260,7 @@ body {
 }
 
 .timeline-yr {
-  background: #474559;
+  background: #3f5efb;
   border-radius: 100%;
   position: absolute;
   width: 75px;
@@ -285,7 +283,7 @@ body {
   margin-left: 6em;
 }
 .timeline-info small {
-  color: #474559;
+  color: #3f5efb;
   font-size: 16px;
   font-weight: bold;
   display: inline-block;
@@ -369,4 +367,192 @@ body {
 .social-icon:hover {
     transform: scale(1.1);
     color: #ffcc00;
+}
+
+/*ANIMATION*/
+
+.portfolio-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.about-text {
+  max-width: 700px;
+}
+
+/* Typography */
+h1 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+  line-height: 1.3;
+}
+
+.welcome-text {
+  font-size: 2.5rem;
+}
+
+.welcome-text span {
+  color: #3f5efb;
+}
+
+.intro-text {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+.intro-text > span {
+  margin-right: 12px;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Typewriter container */
+.typewriter {
+  display: inline-block;
+  position: relative;
+  color: #3f5efb;
+  font-weight: 700;
+  min-height: 3rem;
+}
+
+/* Typewriter text that will be animated */
+.typewriter-text {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #3f5efb;
+  border-right: transparent;
+  width: 0;
+  animation: typewriter 4s steps(30) 1s infinite;
+}
+
+.typewriter-text::before {
+  content: 'Dinidu Sachintha';
+  animation: textChange 20s infinite;
+}
+
+/* Text changing animation */
+@keyframes textChange {
+  0%, 33% {
+    content: 'Dinidu Sachintha';
+  }
+  34%, 66% {
+    content: 'Software Engineer';
+  }
+  67%, 100% {
+    content: 'Web Developer';
+  }
+}
+
+/* Typing animation */
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  20%, 80% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+/* Cursor animation */
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1.2em;
+  background-color: #3f5efb;
+  margin-left: 2px;
+  vertical-align: middle;
+  animation: cursorBlink 0.7s infinite;
+}
+
+@keyframes cursorBlink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.primary-btn {
+  background-color: transparent;
+  color: #3f5efb;
+  border: 2px solid #3f5efb;
+}
+
+.primary-btn:hover {
+  background-color: rgba(63, 94, 251, 0.1);
+}
+
+.secondary-btn {
+  background-color: #3f5efb;
+  color: white;
+  border: 2px solid #3f5efb;
+}
+
+.secondary-btn:hover {
+  background-color: #2a41be;
+  border-color: #2a41be;
+}
+
+.resume-icon::before {
+  content: '\1F4C4';
+  margin-right: 8px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .welcome-text, .intro-text {
+    font-size: 1.8rem;
+  }
+  
+  .typewriter {
+    min-height: 2.3rem;
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
 }

@@ -57,38 +57,32 @@
 </nav>
 
 <!-- ABOUT SECTION -->
-<section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
-                <div class="about-text">
-                    <small class="small-text">Welcome to <span class="mobile-block">my portfolio website!</span></small>
-                    <h1 class="animated animated-text">
-                        <span class="mr-2">Hey folks, I'm</span>
-                        <div class="animated-info">
-                            <span class="animated-item">Marvel Sann</span>
-                            <span class="animated-item">Web Designer</span>
-                            <span class="animated-item">UI Specialist</span>
-                        </div>
-                    </h1>
-
-                    <p>Building a successful product is a challenge. I am highly energetic in user experience design, interfaces and web development.</p>
-
-                    <div class="custom-btn-group mt-4">
-                        <a href="#" class="btn mr-lg-2 custom-btn"><i class='uil uil-file-alt'></i> Download Resume</a>
-                        <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link">Get a free quote</a>
-                    </div>
-                </div>
+<div class="container">
+    <div class="portfolio-container">
+        <div class="about-text">
+          <h1 class="welcome-text">Welcome to <span>my portfolio website!</span></h1>
+          <h1 class="intro-text">
+            <span>Hey folks, I'm</span>
+            <div class="typewriter">
+              <span class="typewriter-text" data-text='["Dinidu Sachintha", "Software Engineer", "Web Developer"]'></span>
+              <span class="cursor"></span>
             </div>
-
-            <div class="col-lg-5 col-md-12 col-12">
-                <div class="about-image svg">
-                    <img src="" class="img-fluid" alt="svg">
-                </div>
-            </div>
+          </h1>
+          <p>Building a successful product is a challenge. I am highly energetic in user experience design, interfaces and web development.</p>
+          <div class="button-group">
+            <a href="#" class="btn primary-btn"><i class="resume-icon"></i> Download Resume</a>
+            <a href="#contact" class="btn secondary-btn">Get a free quote</a>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+</div>
+
+
+
+
+
+
+
 
 <!-- PROJECTS -->
 <section class="project py-5" id="project">
@@ -228,19 +222,19 @@
                     <form action="" method="post" target="_blank">
                         <div class="row">
                             <div class="col-lg-6 col-12">
-                                <label for="name"></label><input type="text" class="form-control" name="name" placeholder="Your Name" id="name">
+                                <label for="name">Your Name</label><input type="text" class="form-control" name="name" placeholder="Your Name" id="name">
                             </div>
 
                             <div class="col-lg-6 col-12">
-                                <label for="email"></label><input type="email" class="form-control" name="email" placeholder="Email" id="email">
-                            </div>
+                                <label for="email">Email</label><input type="email" class="form-control" name="email" placeholder="Email" id="email">
+                            </div>  
 
                             <div class="col-12">
-                                <label for="message"></label><textarea name="message" rows="6" class="form-control" id="message" placeholder="Message"></textarea>
+                                <label for="message">Message</label><textarea name="message" rows="6" class="form-control" id="message" placeholder="Message"></textarea>
                             </div>
 
                             <div class="ml-lg-auto col-lg-5 col-12">
-                                <input type="submit" class="form-control submit-btn" value="Send Button">
+                                <input type="submit" class="btn primary-btn" value="Send Button">
                             </div>
                         </div>
                     </form>
