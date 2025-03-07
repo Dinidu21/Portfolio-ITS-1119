@@ -23,7 +23,7 @@
 <!-- NAVIGATION MENU -->    
 <nav class="navbar">
     <div class="container">
-      <a href="#" class="navbar-brand">Dinidu.dev</a>
+      <a href="#" class="navbar-brand">DINIDU</a>
       <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
       <label for="navbar-toggle" class="navbar-toggler">
         <span class="toggler-icon"></span>
@@ -31,7 +31,7 @@
       <div class="navbar-collapse">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a href="#" class="nav-link active">Home</a>
+            <a href="#" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">Projects</a>
@@ -77,12 +77,65 @@
       </div>
 </div>
 
+<section class="tech-stack">
+    <div class="circle" id="circle1"></div>
+    <div class="circle" id="circle2"></div>
+    <div class="circle" id="circle3"></div>
+    <div class="circle" id="circle4"></div>
+    <div class="circle" id="circle5"></div>
+    <div class="circle" id="circle6"></div>
+    <div class="circle" id="circle7"></div>
+    <div class="circle" id="circle8"></div>
+    <div class="circle" id="circle9"></div>
+    <div class="circle" id="circle10"></div>
+    <div class="circle" id="circle11"></div>
+    <div class="circle" id="circle12"></div>
+    <div class="circle" id="circle13"></div>
+    <div class="circle" id="circle14"></div>
+    <div class="circle" id="circle15"></div>
+</section>
 
+<script>
+    // Function to handle circle visibility
+    function checkCirclesVisibility() {
+        const circles = document.querySelectorAll('.circle');
+        const triggerBottom = window.innerHeight * 0.8; // Trigger at 80% of viewport height
+        const triggerTop = window.innerHeight * 0.2;    // Hide when above 20% of viewport
 
+        circles.forEach(circle => {
+            const circleTop = circle.getBoundingClientRect().top;
+            const circleBottom = circle.getBoundingClientRect().bottom;
 
+            // Show circle if it's within the trigger zone, hide if it's outside
+            if (circleTop < triggerBottom && circleBottom > triggerTop) {
+                if (!circle.classList.contains('visible')) {
+                    circle.classList.add('visible');
+                }
+            } else {
+                if (circle.classList.contains('visible')) {
+                    circle.classList.remove('visible');
+                }
+            }
+        });
+    }
 
+    // Scroll event listener for both up and down
+    document.addEventListener('scroll', function() {
+        checkCirclesVisibility();
+    });
 
+    // Trigger check on page load with a slight delay
+    window.addEventListener('load', function() {
+        setTimeout(() => {
+            checkCirclesVisibility();
+        }, 300); // 300ms delay (adjust as needed)
+    });
 
+    // Optional: Check visibility on window resize
+    window.addEventListener('resize', function() {
+        checkCirclesVisibility();
+    });
+</script>
 
 <!-- PROJECTS -->
 <section class="project py-5" id="project">
@@ -227,7 +280,7 @@
 
                             <div class="col-lg-6 col-12">
                                 <label for="email">Email</label><input type="email" class="form-control" name="email" placeholder="Email" id="email">
-                            </div>  
+                            </div>
 
                             <div class="col-12">
                                 <label for="message">Message</label><textarea name="message" rows="6" class="form-control" id="message" placeholder="Message"></textarea>

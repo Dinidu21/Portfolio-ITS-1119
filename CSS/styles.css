@@ -497,8 +497,6 @@ p {
   }
 }
 
-
-
 /* Buttons */
 .button-group {
   display: flex;
@@ -562,5 +560,74 @@ p {
     width: 100%;
     text-align: center;
     justify-content: center;
+  }
+}
+
+.tech-stack {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px 0;
+  min-height: 100vh;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(0);
+  transition: all 0.5s ease-out;
+}
+
+#circle1 { background-image: url('https://img.icons8.com/?size=100&id=Pd2x9GWu9ovX&format=png&color=000000'); }
+#circle2 { background-image: url('https://img.icons8.com/?size=100&id=90519&format=png&color=000000'); }
+#circle4 { background-image: url('https://img.icons8.com/?size=100&id=PXTY4q2Sq2lG&format=png&color=000000'); }
+#circle5 { background-image: url('https://img.icons8.com/?size=100&id=13441&format=png&color=000000'); }
+#circle3 { background-image: url('https://img.icons8.com/?size=100&id=9vlfB9hjA1lX&format=png&color=000000'); }
+#circle6 { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6bebC_d4eWwJ-x9ntqDuT94TvOgumSBVWHg&s'); }
+#circle7 { background-image: url('https://img.icons8.com/?size=100&id=bosfpvRzNOG8&format=png&color=000000'); }
+#circle8 { background-image: url('https://img.icons8.com/?size=100&id=SDVmtZ6VBGXt&format=png&color=000000'); }
+#circle9 { background-image: url('https://www.stickerpress.in/media/products/800x800/44c9414bb72848a9918654f575228867.jpg'); }
+#circle10 { background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png'); }
+#circle11 { background-image: url('https://img.icons8.com/?size=100&id=38561&format=png&color=000000'); }
+#circle12 { background-image: url('https://www.jetbrains.com/guide/assets/thumbnail-0d651b12.png'); }
+#circle13 { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT24yngytUOIN7kNfMS6jqCw6D8l3rgAPJrwQ&s'); }
+#circle14 { background-image: url('https://withcodeexample.com/wp-content/uploads/2025/01/getting-started-with-python-fastapi-a-comprehensive-guide-image.jpg'); }
+#circle15 { background-image: url('https://img.icons8.com/?size=100&id=UFXRpPFebwa2&format=png&color=000000'); }
+
+/* Staggered animation delay for each circle */
+#circle1.visible { transition-delay: 0s; }
+#circle2.visible { transition-delay: 0.1s; }
+#circle3.visible { transition-delay: 0.2s; }
+#circle4.visible { transition-delay: 0.3s; }
+#circle5.visible { transition-delay: 0.4s; }
+#circle6.visible { transition-delay: 0.5s; }
+#circle7.visible { transition-delay: 0.6s; }
+#circle8.visible { transition-delay: 0.7s; }
+#circle9.visible { transition-delay: 0.8s; }
+#circle10.visible { transition-delay: 0.9s; }
+#circle11.visible { transition-delay: 1s; }
+#circle12.visible { transition-delay: 1.1s; }
+#circle13.visible { transition-delay: 1.2s; }
+#circle14.visible { transition-delay: 1.3s; }
+#circle15.visible { transition-delay: 1.4s; }
+
+.circle.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .circle {
+    width: 60px;
+    height: 60px;
+  }
+  .tech-stack {
+    gap: 15px;
   }
 }
