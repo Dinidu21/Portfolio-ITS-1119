@@ -5,9 +5,14 @@ body {
 
 /* Navbar container */
 .navbar {
-  background-color: #f8f9fa;
+  background-color: white;
   padding: 0.5rem 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
 }
 
 .container {
@@ -24,9 +29,9 @@ body {
 /* Brand */
 .navbar-brand {
   display: inline-block;
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #000;
+  font-size: 1.55rem;
+  font-weight: 1000;
+  color: #3f5efb;
   text-decoration: none;
   padding: 0.5rem 0;
 }
@@ -94,7 +99,8 @@ body {
 
 .nav-link:hover,
 .nav-link:focus {
-  color: rgba(0, 0, 0, 0.9);
+  color: #3f5efb;
+  text-decoration: none;
 }
 
 .nav-link.active {
@@ -162,7 +168,7 @@ body {
 
 .dropdown-item:hover,
 .dropdown-item:focus {
-  color: #16181b;
+  color: #3f5efb;
   background-color: #f8f9fa;
 }
 
@@ -421,7 +427,7 @@ p {
 
 /* Typewriter container */
 .typewriter {
-  display: inline-block;
+  display: flex;
   position: relative;
   color: #3f5efb;
   font-weight: 700;
@@ -437,12 +443,32 @@ p {
   color: #3f5efb;
   border-right: transparent;
   width: 0;
-  animation: typewriter 4s steps(30) 1s infinite;
+  animation: typewriter 4s steps(40) 1s infinite;
+}
+
+/* Cursor animation */
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1.2em;
+  background-color: #3f5efb;
+  margin-left: 2px;
+  vertical-align: middle;
+  animation: cursorBlink 0.7s infinite;
+}
+
+@keyframes cursorBlink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
 }
 
 .typewriter-text::before {
   content: 'Dinidu Sachintha';
-  animation: textChange 20s infinite;
+  animation: textChange 10s infinite;
 }
 
 /* Text changing animation */
@@ -471,25 +497,7 @@ p {
   }
 }
 
-/* Cursor animation */
-.cursor {
-  display: inline-block;
-  width: 3px;
-  height: 1.2em;
-  background-color: #3f5efb;
-  margin-left: 2px;
-  vertical-align: middle;
-  animation: cursorBlink 0.7s infinite;
-}
 
-@keyframes cursorBlink {
-  0%, 49% {
-    opacity: 1;
-  }
-  50%, 100% {
-    opacity: 0;
-  }
-}
 
 /* Buttons */
 .button-group {
