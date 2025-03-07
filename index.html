@@ -95,88 +95,74 @@
     <div class="circle" id="circle15"></div>
 </section>
 
-<script>
-    // Function to handle circle visibility
-    function checkCirclesVisibility() {
-        const circles = document.querySelectorAll('.circle');
-        const triggerBottom = window.innerHeight * 0.8; // Trigger at 80% of viewport height
-        const triggerTop = window.innerHeight * 0.2;    // Hide when above 20% of viewport
-
-        circles.forEach(circle => {
-            const circleTop = circle.getBoundingClientRect().top;
-            const circleBottom = circle.getBoundingClientRect().bottom;
-
-            // Show circle if it's within the trigger zone, hide if it's outside
-            if (circleTop < triggerBottom && circleBottom > triggerTop) {
-                if (!circle.classList.contains('visible')) {
-                    circle.classList.add('visible');
-                }
-            } else {
-                if (circle.classList.contains('visible')) {
-                    circle.classList.remove('visible');
-                }
-            }
-        });
-    }
-
-    // Scroll event listener for both up and down
-    document.addEventListener('scroll', function() {
-        checkCirclesVisibility();
-    });
-
-    // Trigger check on page load with a slight delay
-    window.addEventListener('load', function() {
-        setTimeout(() => {
-            checkCirclesVisibility();
-        }, 300); // 300ms delay (adjust as needed)
-    });
-
-    // Optional: Check visibility on window resize
-    window.addEventListener('resize', function() {
-        checkCirclesVisibility();
-    });
-</script>
 
 <!-- PROJECTS -->
-<section class="project py-5" id="project">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-11 text-center mx-auto col-12">
-                <div class="col-lg-8 mx-auto">
-                    <h2>Things I have designed for digital media agencies</h2>
-                </div>
-                <div class="owl-carousel owl-theme">
-                    <div class="item">
-                        <div class="project-info">
-                            <img src="#" class="img-fluid" alt="project">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="project-info">
-                            <img src="#" class="img-fluid" alt="project">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="project-info">
-                            <img src="#" class="img-fluid" alt="project">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="project-info">
-                            <img src="#" class="img-fluid" alt="project">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="project-info">
-                            <img src="#" class="img-fluid" alt="project">
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div class="container">
+    <div class="card">
+        <div class="card-image"></div>
+        <p class="card-title">Project 1</p>
+        <p class="card-body">
+            Nullam ac tristique nulla, at convallis quam. Integer consectetur mi nec magna tristique, non lobortis.
+        </p>
+        <div class="project-links">
+            <a href="https://github.com/YourRepoLink" target="_blank">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub" class="icon">
+            </a>
+            <a href="https://your-live-demo-link.com" target="_blank" class="live-link">
+                <img src="https://cdn-icons-png.flaticon.com/512/8064/8064583.png" alt="Live Demo" class="icon">
+            </a>
         </div>
     </div>
+    <div class="card">
+        <div class="card-image"></div>
+        <p class="card-title">Project 1</p>
+        <p class="card-body">
+            Nullam ac tristique nulla, at convallis quam. Integer consectetur mi nec magna tristique, non lobortis.
+        </p>
+        <div class="project-links">
+            <a href="https://github.com/YourRepoLink" target="_blank">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub" class="icon">
+            </a>
+            <a href="https://your-live-demo-link.com" target="_blank" class="live-link">
+                <img src="https://cdn-icons-png.flaticon.com/512/8064/8064583.png" alt="Live Demo" class="icon">
+            </a>
+        </div>
     </div>
-</section>
+    <div class="card">
+        <div class="card-image"></div>
+        <p class="card-title">Project 1</p>
+        <p class="card-body">
+            Nullam ac tristique nulla, at convallis quam. Integer consectetur mi nec magna tristique, non lobortis.
+        </p>
+        <div class="project-links">
+            <a href="https://github.com/YourRepoLink" target="_blank">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub" class="icon">
+            </a>
+            <a href="https://your-live-demo-link.com" target="_blank" class="live-link">
+                <img src="https://cdn-icons-png.flaticon.com/512/8064/8064583.png" alt="Live Demo" class="icon">
+            </a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-image"></div>
+        <p class="card-title">Project 1</p>
+        <p class="card-body">
+            Nullam ac tristique nulla, at convallis quam. Integer consectetur mi nec magna tristique, non lobortis.
+        </p>
+        <div class="project-links">
+            <a href="https://github.com/YourRepoLink" target="_blank">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub" class="icon">
+            </a>
+            <a href="https://your-live-demo-link.com" target="_blank" class="live-link">
+                <img src="https://cdn-icons-png.flaticon.com/512/8064/8064583.png" alt="Live Demo" class="icon">
+            </a>
+        </div>
+    </div>
+
+
+</div>
+
+
 
 <!-- FEATURES -->
 <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
@@ -331,6 +317,48 @@
         </div>
     </div>
 </footer>
+
+<script>
+    // Function to handle circle visibility
+    function checkCirclesVisibility() {
+        const circles = document.querySelectorAll('.circle');
+        const triggerBottom = window.innerHeight * 0.8; // Trigger at 80% of viewport height
+        const triggerTop = window.innerHeight * 0.2;    // Hide when above 20% of viewport
+
+        circles.forEach(circle => {
+            const circleTop = circle.getBoundingClientRect().top;
+            const circleBottom = circle.getBoundingClientRect().bottom;
+
+            // Show circle if it's within the trigger zone, hide if it's outside
+            if (circleTop < triggerBottom && circleBottom > triggerTop) {
+                if (!circle.classList.contains('visible')) {
+                    circle.classList.add('visible');
+                }
+            } else {
+                if (circle.classList.contains('visible')) {
+                    circle.classList.remove('visible');
+                }
+            }
+        });
+    }
+
+    // Scroll event listener for both up and down
+    document.addEventListener('scroll', function() {
+        checkCirclesVisibility();
+    });
+
+    // Trigger check on page load with a slight delay
+    window.addEventListener('load', function() {
+        setTimeout(() => {
+            checkCirclesVisibility();
+        }, 300); // 300ms delay (adjust as needed)
+    });
+
+    // Optional: Check visibility on window resize
+    window.addEventListener('resize', function() {
+        checkCirclesVisibility();
+    });
+</script>
 
 </body>
 </html>
