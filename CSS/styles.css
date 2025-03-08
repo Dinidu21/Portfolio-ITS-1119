@@ -610,7 +610,6 @@ p {
   min-height: 370px;
   border-radius: 20px;
   background: #e8e8e8;
-
   transition: 0.4s;
 }
 
@@ -680,7 +679,7 @@ p {
 }
 
 .h2 {
-  font-size: clamp(1.75rem, 2vw, 2.5rem); /* Adjusts between 28px and 40px */
+  font-size: clamp(1.75rem, 2vw, 2.5rem);
   font-weight: 750;
   line-height: 1.2;
   margin-bottom: 0.5rem;
@@ -689,4 +688,9 @@ p {
 .justify-content-center{
   justify-content: center;
   display: flex;
+}
+
+.justify-content-space-between{
+  justify-content: space-between;
+  gap: 15px;
 }
