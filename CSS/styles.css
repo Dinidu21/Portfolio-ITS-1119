@@ -206,20 +206,6 @@ body {
 .google-map iframe {
   position: relative;
 }
-.contact-form {
-  position: relative;
-}
-.contact-form .form-control {
-  background: transparent;
-  border-radius: 2px;
-  outline: none;
-  box-shadow: none;
-  font-weight: bold;
-  margin: 16px 0;
-}
-.contact-form .form-control:not(textarea) {
-  height: 48px;
-}
 
 /*======TIMELINE=======*/
 
@@ -293,11 +279,6 @@ body {
 
 .footer a:hover {
     text-decoration: underline;
-}
-
-.py-5 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
 }
 
 .row {
@@ -697,4 +678,126 @@ p {
 
 .p-2{
   padding: 20px;
+}
+
+/* Ant Design Inspired Styling */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background: white;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Map Styling */
+.map-container {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Form Styling */
+.form-container {
+  flex: 1;
+  padding: 30px;
+  min-width: 300px;
+}
+
+.form-title {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #595959;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border 0.3s ease-in-out;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #1890ff;
+  outline: none;
+}
+
+.submit-btn {
+  background: #1890ff;
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background: #40a9ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+}
+
+/* Sticky WhatsApp Icon */
+.wa-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.wa-icon:hover {
+  transform: scale(1.1);
+}
+
+.wa-icon img {
+  width: 35px;
+  height: 35px;
 }
