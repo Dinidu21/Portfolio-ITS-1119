@@ -1,13 +1,18 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
 }
 
 /* Navbar container */
 .navbar {
-  background-color: #f8f9fa;
+  background-color: white;
   padding: 0.5rem 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
 }
 
 .container {
@@ -24,9 +29,9 @@ body {
 /* Brand */
 .navbar-brand {
   display: inline-block;
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #000;
+  font-size: 1.55rem;
+  font-weight: 1000;
+  color: #3f5efb;
   text-decoration: none;
   padding: 0.5rem 0;
 }
@@ -94,7 +99,8 @@ body {
 
 .nav-link:hover,
 .nav-link:focus {
-  color: rgba(0, 0, 0, 0.9);
+  color: #3f5efb;
+  text-decoration: none;
 }
 
 .nav-link.active {
@@ -115,7 +121,7 @@ body {
 
 .dropdown-arrow {
   position: absolute;
-  right: 1rem;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -153,7 +159,6 @@ body {
 
 .dropdown-item {
   display: block;
-  width: 100%;
   clear: both;
   padding: 0.25rem 1.5rem;
   color: #212529;
@@ -163,7 +168,7 @@ body {
 
 .dropdown-item:hover,
 .dropdown-item:focus {
-  color: #16181b;
+  color: #3f5efb;
   background-color: #f8f9fa;
 }
 
@@ -175,9 +180,7 @@ body {
 .dark-mode .navbar-light .navbar-nav .nav-link {
   color: rgba(255, 255, 255, 0.8);
 }
-.dark-mode .navbar-light .navbar-nav .nav-link:hover {
-  color: #ffc200;
-}
+
 .dark-mode .navbar[class*="headroom--not-top"] {
   background: #0c0c0d;
   border-bottom: 1px solid #1f1f1f;
@@ -201,9 +204,8 @@ body {
 /*====FORM=======*/
 
 .google-map iframe {
-  width: 100%;
+  position: relative;
 }
-
 .contact-form {
   position: relative;
 }
@@ -218,31 +220,6 @@ body {
 .contact-form .form-control:not(textarea) {
   height: 48px;
 }
-.contact-form .form-control:hover, .contact-form .form-control:focus {
-  border-color: #ffc200;
-}
-.contact-form .submit-btn {
-  background: #ffc200;
-  border-radius: 50px;
-  color: #ffffff;
-  font-weight: bold;
-  border: 0;
-  cursor: pointer;
-  transition: all 0.4s ease;
-}
-.contact-form .submit-btn:hover {
-  background: #474559;
-}
-
-.contact-info {
-  background: #474559;
-  border-radius: 0 0 3px 3px;
-  position: relative;
-  bottom: 8px;
-}
-.contact-info p, .contact-info a {
-  color: #f7f3f3;
-} 
 
 /*======TIMELINE=======*/
 
@@ -255,7 +232,7 @@ body {
 }
 .timeline-wrapper:before {
   content: "";
-  background: #474559;
+  background: #3f5efb;
   width: 3px;
   height: 100%;
   position: absolute;
@@ -263,7 +240,7 @@ body {
 }
 
 .timeline-yr {
-  background: #474559;
+  background: #3f5efb;
   border-radius: 100%;
   position: absolute;
   width: 75px;
@@ -286,7 +263,7 @@ body {
   margin-left: 6em;
 }
 .timeline-info small {
-  color: #474559;
+  color: #3f5efb;
   font-size: 16px;
   font-weight: bold;
   display: inline-block;
@@ -370,4 +347,350 @@ body {
 .social-icon:hover {
     transform: scale(1.1);
     color: #ffcc00;
+}
+
+/*ANIMATION*/
+.portfolio-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.about-text {
+  max-width: 700px;
+}
+
+/* Typography */
+.welcome-text {
+  font-size: 2.5rem;
+}
+
+.welcome-text span {
+  color: #3f5efb;
+}
+
+.intro-text {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+.intro-text > span {
+  margin-right: 12px;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Typewriter container */
+.typewriter {
+  display: flex;
+  position: relative;
+  color: #3f5efb;
+  font-weight: 700;
+  min-height: 3rem;
+}
+
+/* Typewriter text that will be animated */
+.typewriter-text {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #3f5efb;
+  border-right: transparent;
+  width: 0;
+  animation: typewriter 4s steps(40) 1s infinite;
+}
+
+/* Cursor animation */
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1.2em;
+  background-color: #3f5efb;
+  margin-left: 2px;
+  vertical-align: middle;
+  animation: cursorBlink 0.7s infinite;
+}
+
+@keyframes cursorBlink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+.typewriter-text::before {
+  content: 'Dinidu Sachintha';
+  animation: textChange 10s infinite;
+}
+
+/* Text changing animation */
+@keyframes textChange {
+  0%, 33% {
+    content: 'Dinidu Sachintha';
+  }
+  34%, 66% {
+    content: 'Software Engineer';
+  }
+  67%, 100% {
+    content: 'Web Developer';
+  }
+}
+
+/* Typing animation */
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  20%, 80% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.primary-btn {
+  background-color: transparent;
+  color: #3f5efb;
+  border: 2px solid #3f5efb;
+}
+
+.primary-btn:hover {
+  background-color: rgba(63, 94, 251, 0.1);
+}
+
+.secondary-btn {
+  background-color: #3f5efb;
+  color: white;
+  border: 2px solid #3f5efb;
+}
+
+.secondary-btn:hover {
+  background-color: #2a41be;
+  border-color: #2a41be;
+}
+
+.resume-icon::before {
+  content: '\1F4C4';
+  margin-right: 8px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .welcome-text, .intro-text {
+    font-size: 1.8rem;
+  }
+  
+  .typewriter {
+    min-height: 2.3rem;
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+.tech-stack {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px 0;
+  min-height: 100vh;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(0);
+  transition: all 0.5s ease-out;
+}
+
+.circle:hover {
+  transform: scale(1.3) !important;
+  cursor: pointer;
+}
+
+#circle1 { background-image: url('https://img.icons8.com/?size=100&id=Pd2x9GWu9ovX&format=png&color=000000'); }
+#circle2 { background-image: url('https://img.icons8.com/?size=100&id=90519&format=png&color=000000'); }
+#circle4 { background-image: url('https://img.icons8.com/?size=100&id=PXTY4q2Sq2lG&format=png&color=000000'); }
+#circle5 { background-image: url('https://img.icons8.com/?size=100&id=13441&format=png&color=000000'); }
+#circle3 { background-image: url('https://img.icons8.com/?size=100&id=9vlfB9hjA1lX&format=png&color=000000'); }
+#circle6 { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6bebC_d4eWwJ-x9ntqDuT94TvOgumSBVWHg&s'); }
+#circle7 { background-image: url('https://img.icons8.com/?size=100&id=bosfpvRzNOG8&format=png&color=000000'); }
+#circle8 { background-image: url('https://img.icons8.com/?size=100&id=SDVmtZ6VBGXt&format=png&color=000000'); }
+#circle9 { background-image: url('https://www.stickerpress.in/media/products/800x800/44c9414bb72848a9918654f575228867.jpg'); }
+#circle10 { background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png'); }
+#circle11 { background-image: url('https://img.icons8.com/?size=100&id=38561&format=png&color=000000'); }
+#circle12 { background-image: url('https://www.jetbrains.com/guide/assets/thumbnail-0d651b12.png'); }
+#circle13 { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT24yngytUOIN7kNfMS6jqCw6D8l3rgAPJrwQ&s'); }
+#circle14 { background-image: url('https://withcodeexample.com/wp-content/uploads/2025/01/getting-started-with-python-fastapi-a-comprehensive-guide-image.jpg'); }
+#circle15 { background-image: url('https://img.icons8.com/?size=100&id=UFXRpPFebwa2&format=png&color=000000'); }
+
+/* Staggered animation delay for each circle */
+#circle1.visible { transition-delay: 0s; }
+#circle2.visible { transition-delay: 0.1s; }
+#circle3.visible { transition-delay: 0.2s; }
+#circle4.visible { transition-delay: 0.3s; }
+#circle5.visible { transition-delay: 0.4s; }
+#circle6.visible { transition-delay: 0.5s; }
+#circle7.visible { transition-delay: 0.6s; }
+#circle8.visible { transition-delay: 0.7s; }
+#circle9.visible { transition-delay: 0.8s; }
+#circle10.visible { transition-delay: 0.9s; }
+#circle11.visible { transition-delay: 1s; }
+#circle12.visible { transition-delay: 1.1s; }
+#circle13.visible { transition-delay: 1.2s; }
+#circle14.visible { transition-delay: 1.3s; }
+#circle15.visible { transition-delay: 1.4s; }
+
+.circle.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .circle {
+    width: 60px;
+    height: 60px;
+  }
+  .tech-stack {
+    gap: 15px;
+  }
+}
+
+
+.card {
+  padding: 20px;
+  width: 330px;
+  min-height: 370px;
+  border-radius: 20px;
+  background: #e8e8e8;
+  transition: 0.4s;
+}
+
+.card:hover {
+  translate: 0 -10px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2e54a7;
+  margin: 15px 0 0 10px;
+}
+
+.card-image {
+  min-height: 170px;
+  background-color: #c9c9c9;
+  border-radius: 15px;
+  box-shadow: inset 8px 8px 10px #c3c3c3,
+  inset -8px -8px 10px #cfcfcf;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6bebC_d4eWwJ-x9ntqDuT94TvOgumSBVWHg&s');
+  background-repeat: no-repeat;
+}
+
+.card-body {
+  margin: 13px 0 0 10px;
+  color: rgb(31, 31, 31);
+  font-size: 15px;
+}
+
+.github-link {
+  text-align: center;
+  margin-top: 10px;
+  padding-right: 10px;
+}
+
+.project-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 10px;
+  padding-right: 10px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+.live-link img {
+  filter: brightness(0.7);
+}
+
+.github-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.github-icon:hover {
+  transform: scale(1.2);
+}
+
+.h2 {
+  font-size: clamp(1.75rem, 2vw, 2.5rem);
+  font-weight: 750;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.justify-content-center{
+  justify-content: center;
+  display: flex;
+}
+
+.justify-content-space-between{
+  justify-content: space-between;
+  gap: 15px;
 }
