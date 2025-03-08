@@ -32,6 +32,13 @@ body {
   color: #3f5efb;
   text-decoration: none;
   padding: 0.5rem 0;
+  transition-duration: 3000ms;
+  transition-timing-function: ease;
+}
+
+.navbar-brand:hover {
+  color: rgba(251, 121, 38, 0.84);
+  background-color: transparent;
 }
 
 .navbar-toggle {
