@@ -534,7 +534,7 @@ p {
   justify-content: center;
   gap: 20px;
   padding: 50px 0;
-  min-height: 100vh;
+  min-height: 2rem ;
 }
 
 .circle {
@@ -693,4 +693,8 @@ p {
 .justify-content-space-between{
   justify-content: space-between;
   gap: 15px;
+}
+
+.p-2{
+  padding: 20px;
 }
