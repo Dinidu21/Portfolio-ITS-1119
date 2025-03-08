@@ -681,7 +681,12 @@ p {
 
 .h2 {
   font-size: clamp(1.75rem, 2vw, 2.5rem); /* Adjusts between 28px and 40px */
-  font-weight: 500;
+  font-weight: 750;
   line-height: 1.2;
   margin-bottom: 0.5rem;
+}
+
+.justify-content-center{
+  justify-content: center;
+  display: flex;
 }
