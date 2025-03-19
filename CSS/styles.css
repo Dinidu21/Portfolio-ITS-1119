@@ -3,7 +3,6 @@ body {
   line-height: 1.5;
 }
 
-/* Navbar container */
 .navbar {
   background-color: white;
   padding: 0.5rem 1rem;
@@ -26,7 +25,6 @@ body {
   align-items: center;
 }
 
-/* Brand */
 .navbar-brand {
   display: inline-block;
   font-size: 1.55rem;
@@ -34,9 +32,15 @@ body {
   color: #3f5efb;
   text-decoration: none;
   padding: 0.5rem 0;
+  transition-duration: 3000ms;
+  transition-timing-function: ease;
 }
 
-/* Toggle button for mobile */
+.navbar-brand:hover {
+  color: rgba(251, 121, 38, 0.84);
+  background-color: transparent;
+}
+
 .navbar-toggle {
   display: none;
 }
@@ -78,7 +82,6 @@ body {
   top: 0.5em;
 }
 
-/* Navbar items */
 .navbar-nav {
   display: flex;
   list-style: none;
@@ -108,7 +111,6 @@ body {
   font-weight: 500;
 }
 
-/* Dropdown styles */
 .dropdown-toggle {
   display: none;
 }
@@ -173,7 +175,6 @@ body {
 }
 
 
-/* DARK MODE*/
 .dark-mode {
   background: #0c0c0d;
 }
@@ -205,20 +206,6 @@ body {
 
 .google-map iframe {
   position: relative;
-}
-.contact-form {
-  position: relative;
-}
-.contact-form .form-control {
-  background: transparent;
-  border-radius: 2px;
-  outline: none;
-  box-shadow: none;
-  font-weight: bold;
-  margin: 16px 0;
-}
-.contact-form .form-control:not(textarea) {
-  height: 48px;
 }
 
 /*======TIMELINE=======*/
@@ -295,11 +282,6 @@ body {
     text-decoration: underline;
 }
 
-.py-5 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
-
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -364,7 +346,6 @@ body {
   max-width: 700px;
 }
 
-/* Typography */
 .welcome-text {
   font-size: 2.5rem;
 }
@@ -391,7 +372,6 @@ p {
   color: #555;
 }
 
-/* Typewriter container */
 .typewriter {
   display: flex;
   position: relative;
@@ -400,7 +380,6 @@ p {
   min-height: 3rem;
 }
 
-/* Typewriter text that will be animated */
 .typewriter-text {
   position: relative;
   display: inline-block;
@@ -412,7 +391,6 @@ p {
   animation: typewriter 4s steps(40) 1s infinite;
 }
 
-/* Cursor animation */
 .cursor {
   display: inline-block;
   width: 3px;
@@ -534,7 +512,7 @@ p {
   justify-content: center;
   gap: 20px;
   padding: 50px 0;
-  min-height: 100vh;
+  min-height: 2rem ;
 }
 
 .circle {
@@ -554,23 +532,22 @@ p {
   cursor: pointer;
 }
 
-#circle1 { background-image: url('https://img.icons8.com/?size=100&id=Pd2x9GWu9ovX&format=png&color=000000'); }
-#circle2 { background-image: url('https://img.icons8.com/?size=100&id=90519&format=png&color=000000'); }
-#circle4 { background-image: url('https://img.icons8.com/?size=100&id=PXTY4q2Sq2lG&format=png&color=000000'); }
-#circle5 { background-image: url('https://img.icons8.com/?size=100&id=13441&format=png&color=000000'); }
-#circle3 { background-image: url('https://img.icons8.com/?size=100&id=9vlfB9hjA1lX&format=png&color=000000'); }
-#circle6 { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6bebC_d4eWwJ-x9ntqDuT94TvOgumSBVWHg&s'); }
-#circle7 { background-image: url('https://img.icons8.com/?size=100&id=bosfpvRzNOG8&format=png&color=000000'); }
-#circle8 { background-image: url('https://img.icons8.com/?size=100&id=SDVmtZ6VBGXt&format=png&color=000000'); }
-#circle9 { background-image: url('https://www.stickerpress.in/media/products/800x800/44c9414bb72848a9918654f575228867.jpg'); }
-#circle10 { background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png'); }
-#circle11 { background-image: url('https://img.icons8.com/?size=100&id=38561&format=png&color=000000'); }
-#circle12 { background-image: url('https://www.jetbrains.com/guide/assets/thumbnail-0d651b12.png'); }
-#circle13 { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT24yngytUOIN7kNfMS6jqCw6D8l3rgAPJrwQ&s'); }
-#circle14 { background-image: url('https://withcodeexample.com/wp-content/uploads/2025/01/getting-started-with-python-fastapi-a-comprehensive-guide-image.jpg'); }
-#circle15 { background-image: url('https://img.icons8.com/?size=100&id=UFXRpPFebwa2&format=png&color=000000'); }
+#circle1 { background-image: url('https://skillicons.dev/icons?i=java'); }
+#circle2 { background-image: url('https://skillicons.dev/icons?i=spring'); }
+#circle3 { background-image: url('https://skillicons.dev/icons?i=react'); }
+#circle4 { background-image: url('https://skillicons.dev/icons?i=python'); }
+#circle5 { background-image: url('https://skillicons.dev/icons?i=js'); }
+#circle6 { background-image: url('https://skillicons.dev/icons?i=nodejs'); }
+#circle7 { background-image: url('https://skillicons.dev/icons?i=mongodb'); }
+#circle8 { background-image: url('https://skillicons.dev/icons?i=express'); }
+#circle9 { background-image: url('https://skillicons.dev/icons?i=flask'); }
+#circle10 { background-image: url('https://skillicons.dev/icons?i=django'); }
+#circle11 { background-image: url('https://skillicons.dev/icons?i=postgres'); }
+#circle12 { background-image: url('https://skillicons.dev/icons?i=redis'); }
+#circle13 { background-image: url('https://skillicons.dev/icons?i=mui'); }
+#circle14 { background-image: url('https://skillicons.dev/icons?i=fastapi'); }
+#circle15 { background-image: url('https://skillicons.dev/icons?i=mysql'); }
 
-/* Staggered animation delay for each circle */
 #circle1.visible { transition-delay: 0s; }
 #circle2.visible { transition-delay: 0.1s; }
 #circle3.visible { transition-delay: 0.2s; }
@@ -592,7 +569,6 @@ p {
   transform: scale(1);
 }
 
-/* Responsive design */
 @media (max-width: 600px) {
   .circle {
     width: 60px;
@@ -602,7 +578,6 @@ p {
     gap: 15px;
   }
 }
-
 
 .card {
   padding: 20px;
@@ -694,3 +669,151 @@ p {
   justify-content: space-between;
   gap: 15px;
 }
+
+.p-2{
+  padding: 20px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background: white;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.map-container {
+  flex: 1;
+  min-width: 300px;
+}
+
+.form-container {
+  flex: 1;
+  padding: 30px;
+  min-width: 300px;
+}
+
+.form-title {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #595959;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border 0.3s ease-in-out;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #1890ff;
+  outline: none;
+}
+
+.submit-btn {
+  background: #1890ff;
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background: #40a9ff;
+}
+
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+}
+
+.wa-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.wa-icon:hover {
+  transform: scale(1.1);
+}
+
+.wa-icon img {
+  width: 35px;
+  height: 35px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.social-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
