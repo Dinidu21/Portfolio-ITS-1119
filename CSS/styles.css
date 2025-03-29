@@ -1223,3 +1223,36 @@ body.dark-mode {
 .timeline-wrapper.visible .timeline-info {
   opacity: 1;
 }
+
+.sticky-sidebar {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1000;
+}
+.sidebar-item {
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.3s ease;
+}
+.sidebar-item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.sidebar-item:hover {
+  background: var(--accent);
+  transform: scale(1.1);
+}
