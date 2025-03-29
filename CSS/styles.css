@@ -877,3 +877,62 @@ p {
   opacity: 1;
   transform: scale(1);
 }
+
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+.dark-mode .navbar {
+  background-color: #222;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+.dark-mode .card {
+  background: #2a2a2a;
+  color: #e0e0e0;
+}
+.dark-mode .footer {
+  background-color: #111;
+}
+.dark-mode-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background: #3f5efb;
+  color: white;
+  cursor: pointer;
+  margin-left: 15px;
+}
+.dark-mode .dark-mode-btn {
+  background: #974af6;
+}
+
+.navbar {
+  transition: all 0.3s ease;
+}
+.navbar.shrink {
+  padding: 0.2rem 1rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.dark-mode .navbar.shrink {
+  background-color: rgba(34, 34, 34, 0.95);
+}
+.navbar.shrink .navbar-brand {
+  font-size: 1.3rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+.dark-mode .card {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.contact-wrapper {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+}
+.dark-mode .contact-wrapper {
+  background: rgba(255, 255, 255, 0.05);
+}
