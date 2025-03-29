@@ -15,10 +15,14 @@
     <meta name="twitter:image" content="/assets/images/me.jpeg">
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="stylesheet" href="CSS/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+<div class="custom-cursor"></div>
 <body>
-
+<div id="preloader">
+    <div class="loader"></div>
+</div>
 <!-- NAVIGATION MENU -->    
 <nav class="navbar">
     <div class="container">
@@ -27,30 +31,36 @@
       <label for="navbar-toggle" class="navbar-toggler">
         <span class="toggler-icon"></span>
       </label>
-      <div class="navbar-collapse">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a href="#home" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="#projects" class="nav-link">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a href="#experience" class="nav-link">Experience</a>
-          </li>
-          <li class="nav-item dropdown">
-            <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle">
-            <label for="dropdown-toggle" class="nav-link dropdown-label">
-              More
-              <span class="dropdown-arrow"></span>
-            </label>
-            <ul class="dropdown-menu">
-              <li><a href="#" class="dropdown-item">Achievements</a></li>
-              <li><a href="#" class="dropdown-item">Certifications</a></li>
-              <li><a href="#articles" class="dropdown-item">Articles</a></li>
+        <div class="navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle">
+                    <label for="dropdown-toggle" class="nav-link dropdown-label">
+                        More
+                        <span class="dropdown-arrow"></span>
+                    </label>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-item">Achievements</a></li>
+                        <li><a href="#" class="dropdown-item">Certifications</a></li>
+                        <li><a href="#articles" class="dropdown-item">Articles</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <button id="dark-mode-toggle" class="dark-mode-btn">Dark Mode</button>
+                </li>
             </ul>
-          </li>
-        </ul>
+
+        </div>
+      <div class="navbar-collapse">
       </div>
     </div>
 </nav>
@@ -71,7 +81,7 @@
 
                 <p>Building a successful product is a challenge. I am highly energetic in user experience design, interfaces and web development.</p>
                 <div class="button-group">
-                    <a href="#" class="btn primary-btn"><i class="resume-icon"></i> Download Resume</a>
+                    <a href="#" class="btn primary-btn-resume"><i class="resume-icon"></i> Download Resume</a>
                     <a href="#contact" class="btn secondary-btn">Get a free quote</a>
                     <a href="https://github.com/Dinidu21" target="_blank" class="social-icon github">
                         <img src="https://skillicons.dev/icons?i=github" alt="GitHub">
@@ -346,6 +356,7 @@
 <a href="https://wa.me/+94716280012" target="_blank" class="wa-icon">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
+<button id="back-to-top" class="back-to-top-btn"><i class="fas fa-arrow-up"></i></button>
 
 <!-- FOOTER -->
 <footer class="footer">
