@@ -136,7 +136,7 @@ function debounce(func, delay = 100) {
     };
 }
 
-
+/** === SIDEBAR TOGGLE ANIMATION === **/
 function initSidebarToggle() {
     window.addEventListener('scroll', () => {
         const sidebarItems = document.querySelectorAll('.sidebar-item');
