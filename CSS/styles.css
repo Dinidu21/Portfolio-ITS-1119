@@ -1137,3 +1137,30 @@ body.dark-mode {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+.navbar {
+  padding: 0.5rem 1rem;
+}
+.navbar-brand {
+  font-size: 1.55rem;
+}
+.navbar-nav {
+  display: flex;
+}
+.navbar-toggler {
+  display: none;
+}
+
+.welcome-text {
+  font-size: 2.5rem;
+}
+.intro-text {
+  font-size: 2.2rem;
+}
+.button-group {
+  gap: 15px;
+}
+
+.card {
+  width: 330px;
+}
