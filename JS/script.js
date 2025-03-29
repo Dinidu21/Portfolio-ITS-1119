@@ -65,3 +65,18 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+const cursor = document.querySelector('.custom-cursor');
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = `${e.clientX}px`;
+    cursor.style.top = `${e.clientY}px`;
+});
+document.querySelectorAll('a, button, .card').forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+});
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    setTimeout(() => {
+        preloader.classList.add('hidden');
+    }, 500); // Delay for effect
+});
