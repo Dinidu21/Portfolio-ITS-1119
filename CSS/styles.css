@@ -1208,3 +1208,18 @@ body.dark-mode {
   z-index: 99;
 }
 
+.timeline-wrapper::before {
+  height: 0;
+  transition: height 0.8s ease;
+}
+.timeline-wrapper.visible::before {
+  height: 100%;
+}
+
+.timeline-info {
+  opacity: 0;
+  transition: opacity 0.5s ease 0.2s;
+}
+.timeline-wrapper.visible .timeline-info {
+  opacity: 1;
+}
