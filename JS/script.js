@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCursorEffects();
     initScrollEvents();
     initCounterAnimation();
+    initSidebarToggle();
 });
 
 /** === INTERSECTION OBSERVER FOR ANIMATIONS === **/
@@ -133,4 +134,16 @@ function debounce(func, delay = 100) {
         clearTimeout(timeout);
         timeout = setTimeout(() => func(...args), delay);
     };
+}
+
+
+function initSidebarToggle() {
+    window.addEventListener('scroll', () => {
+        const sidebarItems = document.querySelectorAll('.sidebar-item');
+        sidebarItems.forEach((item, index) => {
+            setTimeout(() => {
+                item.classList.toggle('visible', window.scrollY > 100);
+            }, index * 100);
+        });
+    });
 }
