@@ -1053,3 +1053,17 @@ body.dark-mode {
   transform: scale(1.1);
   background: var(--accent);
 }
+.nav-link.active {
+  color: var(--primary);
+  font-weight: 600;
+  position: relative;
+}
+.nav-link.active::after {
+  content: '';
+  width: 50%;
+  height: 2px;
+  background: var(--accent);
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+}
