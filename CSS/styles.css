@@ -1,6 +1,83 @@
 html {
   scroll-behavior: smooth;
 }
+
+body {
+  font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400; /* Lighter base weight */
+  line-height: 1.6;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600; /* Bolder headings */
+  color: #1a1a1a;
+}
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6 {
+  color: #e0e0e0;
+}
+
+.container {
+  padding: 0 20px;
+  max-width: 1200px; /* Slightly wider for modern screens */
+}
+section {
+  padding: 80px 0; /* More breathing room */
+}
+.h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+}
+.h2::after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.justify-content-space-between {
+  gap: 30px; /* Increased for cleaner spacing */
+  flex-wrap: wrap;
+}
+.card {
+  width: 100%;
+  max-width: 340px; /* Slightly wider cards */
+  padding: 25px;
+}
+:root {
+  --primary: #3b82f6;
+  --accent: #ec4899;
+  --bg-light: #f9fafb;
+  --bg-dark: #1f2937;
+  --text-light: #374151;
+  --text-dark: #d1d5db;
+}
+body {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+.primary-btn {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  border: none;
+}
+.primary-btn:hover {
+  background: linear-gradient(135deg, #2563eb, #db2777);
+}
+.secondary-btn {
+  background: var(--primary);
+  border: none;
+}
+.secondary-btn:hover {
+  background: #2563eb;
+}
 body {
   font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
@@ -463,13 +540,13 @@ p {
   font-size: 1rem;
 }
 
-.primary-btn {
+.primary-btn-resume {
   background-color: transparent;
   color: #3f5efb;
   border: 2px solid #3f5efb;
 }
 
-.primary-btn:hover {
+.primary-btn-resume:hover {
   background-color: rgba(63, 94, 251, 0.1);
 }
 
@@ -952,4 +1029,27 @@ body.dark-mode {
   0% { transform: scale(1.1); }
   50% { transform: scale(1.15); }
   100% { transform: scale(1.1); }
+}
+
+.back-to-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.back-to-top-btn.visible {
+  opacity: 1;
+}
+.back-to-top-btn:hover {
+  transform: scale(1.1);
+  background: var(--accent);
 }
