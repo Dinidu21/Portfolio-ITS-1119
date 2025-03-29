@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
@@ -846,4 +849,31 @@ p {
 .social-icon:hover {
   transform: scale(1.1);
 }
+.card, .timeline-wrapper, .circle {
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+}
 
+.card {
+  transform: translateY(50px);
+}
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-wrapper {
+  transform: translateX(-50px);
+}
+.timeline-wrapper.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.circle {
+  transform: scale(0);
+}
+.circle.visible {
+  opacity: 1;
+  transform: scale(1);
+}

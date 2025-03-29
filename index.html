@@ -255,7 +255,7 @@
     <h2 class="container h2 justify-content-center p-2" id="articles">Articles</h2>
     <section class="container justify-content-space-between" id="articles-section">
         <div class="card" data-delay="0">
-            <div class="card-image-article" style="background-image: url('https://res.cloudinary.com/dxixze0k3/image/upload/v1742410370/Web_developer_1_bi8uqt.png');"></div>
+            <div class="card-image-article" style="background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/medium.svg');"></div>
             <p class="card-title">A Comprehensive Guide to Industry Standard Object Creation in Java</p>
             <p class="card-body">
                 Singleton Design Pattern: A Comprehensive Guide to Industry-Standard Object Creation in Java.
@@ -381,110 +381,6 @@
         </div>
     </div>
 </footer>
-
-<script>
-    // Function to handle circle visibility
-    function checkCirclesVisibility() {
-        const circles = document.querySelectorAll('.circle');
-        const triggerBottom = window.innerHeight * 0.8; // Trigger at 80% of viewport height
-        const triggerTop = window.innerHeight * 0.2;    // Hide when above 20% of viewport
-
-        circles.forEach(circle => {
-            const circleTop = circle.getBoundingClientRect().top;
-            const circleBottom = circle.getBoundingClientRect().bottom;
-
-            // Show circle if it's within the trigger zone, hide if it's outside
-            if (circleTop < triggerBottom && circleBottom > triggerTop) {
-                if (!circle.classList.contains('visible')) {
-                    circle.classList.add('visible');
-                }
-            } else {
-                if (circle.classList.contains('visible')) {
-                    circle.classList.remove('visible');
-                }
-            }
-        });
-    }
-
-    // Scroll event listener for both up and down
-    document.addEventListener('scroll', function() {
-        checkCirclesVisibility();
-    });
-
-    // Trigger check on page load with a slight delay
-    window.addEventListener('load', function() {
-        setTimeout(() => {
-            checkCirclesVisibility();
-        }, 300); // 300ms delay (adjust as needed)
-    });
-
-    // Optional: Check visibility on window resize
-    window.addEventListener('resize', function() {
-        checkCirclesVisibility();
-    });
-</script>
-<script>
-    // Using Intersection Observer
-    function animateProjectCards() {
-        const cards = document.querySelectorAll('.card');
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    cards.forEach((card, index) => {
-                        setTimeout(() => {
-                            card.classList.add('visible');
-                        }, index * 300);
-                    });
-                    observer.unobserve(entry.target); // Stop observing after animation
-                }
-            });
-        }, {
-            threshold: 0.1 // Trigger when 10% of section is visible
-        });
-
-        observer.observe(document.querySelector('#projects'));
-    }
-
-    // Run on page load
-    window.addEventListener('load', animateProjectCards);
-</script>
-<script>
-    // Unified animation handler
-    function animateItems(items, delayMultiplier = 300) {
-        items.forEach((item, index) => {
-            const delay = item.dataset.delay ?
-                parseInt(item.dataset.delay) * delayMultiplier :
-                index * delayMultiplier;
-
-            setTimeout(() => {
-                item.classList.add('visible');
-            }, delay);
-        });
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                if (entry.target.matches('#projects')) {
-                    animateItems(entry.target.querySelectorAll('.card'));
-                } else if (entry.target.matches('.timeline')) {
-                    animateItems(entry.target.querySelectorAll('.timeline-wrapper'));
-                }
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
-
-    // Observe all animated sections
-    window.addEventListener('load', () => {
-        observer.observe(document.querySelector('#projects'));
-        document.querySelectorAll('.timeline').forEach(timeline => {
-            observer.observe(timeline);
-        });
-    });
-</script>
+<script src="JS/script.js"></script>
 </body>
 </html>
