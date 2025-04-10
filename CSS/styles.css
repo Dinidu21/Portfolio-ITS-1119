@@ -1137,3 +1137,131 @@ body.dark-mode {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+.navbar {
+  padding: 0.5rem 1rem;
+}
+.navbar-brand {
+  font-size: 1.55rem;
+}
+.navbar-nav {
+  display: flex;
+}
+.navbar-toggler {
+  display: none;
+}
+
+.welcome-text {
+  font-size: 2.5rem;
+}
+.intro-text {
+  font-size: 2.2rem;
+}
+.button-group {
+  gap: 15px;
+}
+
+.card {
+  width: 330px;
+}
+
+.stats {
+  padding: 80px 0;
+  background: var(--bg-light);
+}
+.dark-mode .stats {
+  background: var(--bg-dark);
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  text-align: center;
+}
+.stat-item {
+  padding: 20px;
+}
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+.stat-item p {
+  margin: 10px 0 0;
+  color: var(--text-light);
+}
+.dark-mode .stat-item p {
+  color: var(--text-dark);
+}
+
+.wa-icon {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 100;
+}
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+}
+
+.timeline-wrapper::before {
+  height: 0;
+  transition: height 0.8s ease;
+}
+.timeline-wrapper.visible::before {
+  height: 100%;
+}
+
+.timeline-info {
+  opacity: 0;
+  transition: opacity 0.5s ease 0.2s;
+}
+.timeline-wrapper.visible .timeline-info {
+  opacity: 1;
+}
+
+.sticky-sidebar {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1000;
+}
+.sidebar-item {
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.3s ease;
+}
+.sidebar-item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.sidebar-item:hover {
+  background: var(--accent);
+  transform: scale(1.1);
+}
+
+#particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}

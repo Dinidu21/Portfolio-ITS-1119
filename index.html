@@ -18,7 +18,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+
 <div class="custom-cursor"></div>
+<div class="sticky-sidebar">
+    <a href="#home" class="sidebar-item"><i class="fas fa-home"></i></a>
+    <a href="#projects" class="sidebar-item"><i class="fas fa-folder"></i></a>
+    <a href="#experience" class="sidebar-item"><i class="fas fa-briefcase"></i></a>
+    <a href="#contact" class="sidebar-item"><i class="fas fa-envelope"></i></a>
+    <a href="#articles" class="sidebar-item"><i class="fas fa-newspaper"></i></a>
+    <a href="#tech-stack" class="sidebar-item"><i class="fas fa-cogs"></i></a>
+</div>
+
 <body>
 <div id="preloader">
     <div class="loader"></div>
@@ -68,6 +78,7 @@
 <main>
     <!-- ABOUT SECTION -->
     <div class="container" id="home">
+        <canvas id="particles"></canvas>
         <div class="portfolio-container">
             <div class="about-text">
                 <h1 class="welcome-text">Welcome to <span>my portfolio website!</span></h1>
@@ -310,6 +321,26 @@
                 <a href="https://medium.com/@dinidusachintha/singleton-design-pattern-a-comprehensive-guide-to-industry-standard-object-creation-in-java-c4cd42b733c3" target="_blank">
                     <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/medium.svg" alt="Medium" class="icon">
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <h2 class="h2">My Stats</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="5">0</span>
+                    <p>Years Experience</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="55">0</span>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="30">0</span>
+                    <p>Certifications</p>
+                </div>
             </div>
         </div>
     </section>
