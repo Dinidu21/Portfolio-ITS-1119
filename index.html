@@ -33,7 +33,7 @@
 <div id="preloader">
     <div class="loader"></div>
 </div>
-<!-- NAVIGATION MENU -->    
+<!-- NAVIGATION MENU -->
 <nav class="navbar">
     <div class="container">
       <a href="#" class="navbar-brand">DINIDU</a>
@@ -68,10 +68,7 @@
                     <button id="dark-mode-toggle" class="dark-mode-btn">Dark Mode</button>
                 </li>
             </ul>
-
         </div>
-      <div class="navbar-collapse">
-      </div>
     </div>
 </nav>
 
@@ -106,7 +103,8 @@
         </div>
     </div>
 
-    <h2 class="container h2 justify-content-center p-2" id="tech-stack">My Tech Stack</h2>
+    <!-- TECH STACK -->
+    <h2 class="h2 justify-content-center p-2" id="tech-stack">My Tech Stack</h2>
     <section class="tech-stack">
         <div class="circle" id="circle1"></div>
         <div class="circle" id="circle2"></div>
@@ -127,7 +125,7 @@
 
 
     <!-- PROJECTS -->
-    <h2 class="container h2 justify-content-center p-2" id="projects">Projects</h2>
+    <h2 class="h2 justify-content-center p-2" id="projects">Projects</h2>
     <section class="container justify-content-space-between">
         <div class="card" data-delay="0">
             <div class="card-image"></div>
@@ -273,7 +271,7 @@
     </section>
 
     <!-- ARTICLES -->
-    <h2 class="container h2 justify-content-center p-2" id="articles">Articles</h2>
+    <h2 class="h2 justify-content-center p-2" id="articles">Articles</h2>
     <section class="container justify-content-space-between" id="articles-section">
         <div class="card" data-delay="0">
             <div class="card-image-article" style="background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/medium.svg');"></div>
@@ -423,6 +421,11 @@
         </div>
     </div>
 </footer>
-<script src="JS/script.js"></script>
+
+<script src="JS/script.js">
+    document.getElementById('dark-mode-toggle').addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+    });
+</script>
 </body>
 </html>
