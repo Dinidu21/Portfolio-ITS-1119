@@ -89,8 +89,8 @@ section {
   --primary: #3b82f6;
   --accent: #ec4899;
   --bg-light: #f9fafb;
-  --bg-dark: #1f2937;
-  --text-light: #374151;
+  --bg-dark: #000000;
+  --text-light: #000000;
   --text-dark: #d1d5db;
 }
 body {
@@ -931,9 +931,14 @@ body.dark-mode {
   padding: 80px 0;
   background: var(--bg-light);
 }
-.dark-mode .stats {
-  background: var(--bg-dark);
+.dark-mode .stats{
+  background-color: #1a1a1a;
 }
+
+.dark-mode .contact-container{
+  background-color: #1a1a1a;
+}
+
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
