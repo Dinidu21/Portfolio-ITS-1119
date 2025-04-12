@@ -170,21 +170,7 @@ section {
     color: #fff;
 }
 .nav-link:hover {
-    color: #FFD93D;
-}
-.navbar-toggle,
-.dropdown-toggle {
-    display: none;
-}
-.navbar-toggler {
-    display: none;
-    cursor: pointer;
-}
-.toggler-icon {
-    width: 25px;
-    height: 3px;
-    background: #333;
-    display: block;
+    color: rgba(184, 127, 251, 0.9);
 }
 .dark-mode .toggler-icon {
     background: #fff;
@@ -230,7 +216,7 @@ section {
     color: #fff;
 }
 .dark-mode-btn:hover {
-    background: #FFD93D;
+    background: rgba(158, 99, 241, 0.9);
     color: #333;
 }
 
@@ -1258,3 +1244,91 @@ p {
         grid-template-columns: 1fr 1fr;
     }
 }
+
+.navbar-toggle,
+.dropdown-toggle {
+    display: none;
+}
+
+.navbar-toggler {
+    display: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.toggler-icon {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    display: block;
+    margin: 4px 0;
+    transition: all 0.3s;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 0.5rem;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .navbar-toggler {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .navbar-collapse {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+    .dark-mode .navbar-collapse {
+        background: #2a2a2a;
+    }
+
+    .navbar-toggle:checked ~ .navbar-collapse {
+        display: block;
+    }
+
+    .nav-item {
+        padding: 0.5rem 0;
+    }
+
+    .dropdown-label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        background: none;
+        padding-left: 1rem;
+    }
+
+    .dropdown-toggle:checked ~ .dropdown-menu {
+        display: block;
+    }
+
+    .dark-mode-btn {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+}
+
