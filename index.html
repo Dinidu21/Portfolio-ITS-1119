@@ -15,6 +15,9 @@
     <meta name="twitter:image" content="/assets/images/me.jpeg">
     <link rel="stylesheet" href="CSS/v2.css">
     <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link rel="shortcut icon" href="assets/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="https://cdn.counter.dev/script.js" data-id="6ee414dd-acdf-48fd-a837-b522dd5137e5" data-utcoffset="6"></script>
@@ -518,45 +521,6 @@
     </div>
 </footer>
 
-<script src="https://cdn.counter.dev/script.js" data-id="6ee414dd-acdf-48fd-a837-b522dd5137e5" data-utcoffset="6"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const dailyVisitors = document.getElementById('daily-visitors');
-        const totalVisitors = document.getElementById('total-visitors');
-
-        fetch('https://api.counter.dev/get/6ee414dd-acdf-48fd-a837-b522dd5137e5')
-            .then(res => {
-                if (!res.ok) throw new Error('Request failed');
-                return res.json();
-            })
-            .then(data => {
-                // If running locally, simulate data
-                const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
-                if (isLocal || !data.total || !data.today) {
-                    totalVisitors.textContent = '123,456';
-                    dailyVisitors.textContent = '789';
-                } else {
-                    totalVisitors.textContent = data.total.toLocaleString();
-                    dailyVisitors.textContent = data.today.toLocaleString();
-                }
-            })
-            .catch(err => {
-                console.error('Error fetching visitor data:', err);
-                totalVisitors.textContent = 'N/A';
-                dailyVisitors.textContent = 'N/A';
-            });
-
-
-        // Optional static fallback for unique visitors
-        const uniqueVisitors = document.getElementById('unique-visitors');
-        uniqueVisitors.textContent = Math.floor(Math.random() * 400 + 100).toLocaleString();
-    });
-</script>
-
-<script src="JS/script.js">
-    document.getElementById('dark-mode-toggle').addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-});
-</script>
+<script src="JS/script.js"></script>
 </body>
 </html>

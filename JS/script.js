@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollEvents();
     initCounterAnimation();
     initSidebarToggle();
+    createVisitorCounter();
 });
 
 /** === INTERSECTION OBSERVER FOR ANIMATIONS === **/
@@ -148,3 +149,29 @@ function initSidebarToggle() {
     });
 }
 
+function createVisitorCounter() {
+    const dailyVisitors = document.getElementById('daily-visitors');
+    const totalVisitors = document.getElementById('total-visitors');
+    const uniqueVisitors = document.getElementById('unique-visitors');
+
+    if (!dailyVisitors || !totalVisitors || !uniqueVisitors) return;
+
+    try {
+        setTimeout(() => {
+            const mockData = {
+                total: Math.floor(Math.random() * 10000 + 1000),
+                today: Math.floor(Math.random() * 200 + 50),
+                unique: Math.floor(Math.random() * 400 + 100)
+            };
+
+            totalVisitors.textContent = mockData.total.toLocaleString();
+            dailyVisitors.textContent = mockData.today.toLocaleString();
+            uniqueVisitors.textContent = mockData.unique.toLocaleString();
+        }, 500);
+    } catch (err) {
+        console.log('Using fallback visitor data');
+        totalVisitors.textContent = '1,234';
+        dailyVisitors.textContent = '56';
+        uniqueVisitors.textContent = '789';
+    }
+}
