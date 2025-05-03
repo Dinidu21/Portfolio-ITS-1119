@@ -258,10 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!dailyVisitors || !totalVisitors || !uniqueVisitors) return;
 
-    // Use a CORS proxy or fallback to mock data
     try {
-        // Since api.counter.dev has CORS issues, we'll use mock data
-        // For a production site, you'd need to implement a serverless function or backend proxy
         setTimeout(() => {
             const mockData = {
                 total: Math.floor(Math.random() * 10000 + 1000),
