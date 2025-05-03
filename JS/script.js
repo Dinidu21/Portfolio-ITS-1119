@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollEvents();
     initCounterAnimation();
     initSidebarToggle();
-    createVisitorCounter();
 });
 
 /** === INTERSECTION OBSERVER FOR ANIMATIONS === **/
@@ -100,7 +99,7 @@ function initCounterAnimation() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                document.querySelectorAll('.stat-number').forEach(stat => {
+                entry.target.querySelectorAll('.stat-number').forEach(stat => {
                     animateCounter(stat, parseInt(stat.getAttribute('data-target')));
                 });
                 observer.unobserve(entry.target);
@@ -108,25 +107,32 @@ function initCounterAnimation() {
         });
     }, { threshold: 0.7 });
 
-    observer.observe(document.querySelector('.stats'));
+    document.querySelectorAll('.stats, .visitor-stats').forEach(section => {
+        observer.observe(section);
+    });
 }
 
 function animateCounter(el, target) {
-    let start = 0;
-    const increment = target / 50;
+    const duration = 2000; // animation duration in ms (2 seconds)
+    const startTime = performance.now();
 
-    function updateCounter() {
-        start += increment;
-        if (start >= target) {
-            el.textContent = target;
-        } else {
-            el.textContent = Math.ceil(start);
+    function updateCounter(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1); // value between 0 and 1
+
+        const currentValue = Math.floor(progress * target);
+        el.textContent = currentValue;
+
+        if (progress < 1) {
             requestAnimationFrame(updateCounter);
+        } else {
+            el.textContent = target;
         }
     }
 
-    updateCounter();
+    requestAnimationFrame(updateCounter);
 }
+
 
 /** === UTILITY FUNCTION: DEBOUNCE (For performance optimization) === **/
 function debounce(func, delay = 100) {
@@ -147,31 +153,4 @@ function initSidebarToggle() {
             }, index * 100);
         });
     });
-}
-
-function createVisitorCounter() {
-    const dailyVisitors = document.getElementById('daily-visitors');
-    const totalVisitors = document.getElementById('total-visitors');
-    const uniqueVisitors = document.getElementById('unique-visitors');
-
-    if (!dailyVisitors || !totalVisitors || !uniqueVisitors) return;
-
-    try {
-        setTimeout(() => {
-            const mockData = {
-                total: Math.floor(Math.random() * 10000 + 1000),
-                today: Math.floor(Math.random() * 200 + 50),
-                unique: Math.floor(Math.random() * 400 + 100)
-            };
-
-            totalVisitors.textContent = mockData.total.toLocaleString();
-            dailyVisitors.textContent = mockData.today.toLocaleString();
-            uniqueVisitors.textContent = mockData.unique.toLocaleString();
-        }, 500);
-    } catch (err) {
-        console.log('Using fallback visitor data');
-        totalVisitors.textContent = '1,234';
-        dailyVisitors.textContent = '56';
-        uniqueVisitors.textContent = '789';
-    }
 }
