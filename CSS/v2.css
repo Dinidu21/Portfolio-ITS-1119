@@ -2,11 +2,11 @@
     --bg-color: #f8f9fa;
     --card-bg-color: #ffffff;
     --accent-color: #4a6cf7;
-    --text-color: #333;
+    --text-color: #121111;
 
     --dark-bg-color: #1f2937;
     --dark-card-bg-color: #374151;
-    --dark-text-color: #e5e7eb;
+    --dark-text-color: #f4f4f4;
 }
 
 /* Reset and Base Styles */
@@ -1035,7 +1035,7 @@ p {
         display: block;
     }
     .sticky-sidebar {
-        left: 5px;
+        display: none;
     }
     .sidebar-item {
         width: 35px;
@@ -1099,7 +1099,7 @@ p {
         display: block;
     }
     .sticky-sidebar {
-        left: 10px;
+        display: none;
     }
     .welcome-text {
         font-size: 1.8rem;
@@ -1484,4 +1484,9 @@ body.dark-mode .visitor-stats .stat-item {
 
 body.dark-mode .visitor-stats .stat-item p {
     color: var(--dark-text-color, #e5e7eb);
+}
+
+body.dark-mode .hero-p,
+body.dark-mode .dark-text{
+    color: #676767;
 }
