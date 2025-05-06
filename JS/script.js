@@ -412,8 +412,8 @@ function initializeCertificationDetailModal() {
             validity: '2027-02-28',
             credentialUrl: 'assets/cert/coderally_5_0.png'
         },
-        'Fintech: An Introduction to Financial Technology': {
-            issuer: 'Association of Computing Students, University of Sri Jayewardenepura',
+        'An Introduction to Financial Technology': {
+            issuer: 'University of Sri Jayewardenepura',
             date: '2025-04-07',
             image: 'assets/cert/techxplore_fintech.png',
             description: 'The TechXplore Edition 1.0 certificate acknowledges participation in a session on Fintech and its applications.',
@@ -437,7 +437,7 @@ function initializeCertificationDetailModal() {
             description: 'The Python for Beginners certificate from the University of Moratuwa acknowledges participation in an online learning program focused on Python programming fundamentals.',
             skills: ['Python', 'Basic Programming', 'Functions', 'Loops', 'Data Structures'],
             validity: '2027-12-15',
-            credentialUrl: 'https://open.uom.lk/verify'
+            credentialUrl: 'assets/cert/python_for_beginners_moratuwa.png'
         }
     };
 
