@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initSidebarToggle();
     certifications();
     initializeCertificationDetailModal();
-    initBadgeRainAnimation();
 });
 
 /** === INTERSECTION OBSERVER FOR ANIMATIONS === **/
@@ -525,51 +524,5 @@ function initializeCertificationDetailModal() {
     if (certificationContainer) {
         const observer = new MutationObserver(() => addClickEvents());
         observer.observe(certificationContainer, { childList: true, subtree: true });
-    }
-}
-
-function initBadgeRainAnimation() {
-    const achievementsSection = document.getElementById('achievements');
-    const badgeRainContainer = document.getElementById('badge-rain-container');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Start badge raining animation
-                startBadgeRain(badgeRainContainer);
-                // Stop observing after animation starts (one-time effect)
-                observer.unobserve(achievementsSection);
-            }
-        });
-    }, { threshold: 0.3 }); // Trigger when 30% of the section is visible
-
-    observer.observe(achievementsSection);
-}
-
-function startBadgeRain(container) {
-    const badgeTypes = [
-        { src: 'assets/badges/hackerrank-java-gold.png', alt: 'Java Gold Badge' },
-        { src: 'assets/badges/hackerrank-problem-solving-silver.png', alt: 'Problem Solving Silver Badge' }
-    ];
-
-    // Create 10 badge elements to rain down
-    for (let i = 0; i < 10; i++) {
-        const badge = document.createElement('img');
-        const badgeType = badgeTypes[i % badgeTypes.length]; // Alternate between badge types
-        badge.src = badgeType.src;
-        badge.alt = badgeType.alt;
-        badge.classList.add('raining-badge');
-
-        // Randomize starting position and animation delay
-        badge.style.left = `${Math.random() * 100}%`; // Random horizontal position
-        badge.style.animationDelay = `${Math.random() * 2}s`; // Random delay up to 2 seconds
-        badge.style.animationDuration = `${3 + Math.random() * 2}s`; // Random duration between 3-5 seconds
-
-        container.appendChild(badge);
-
-        // Remove badge after animation completes to prevent DOM clutter
-        badge.addEventListener('animationend', () => {
-            badge.remove();
-        });
     }
 }
