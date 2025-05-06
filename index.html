@@ -367,7 +367,6 @@
                             <div class="certification-image" style="background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg')"></div>
                             <h3>Java Certified Professional</h3>
                             <p>Oracle Corporation</p>
-                            <div class="certification-date">2023</div>
                         </div>
                     </div>
                     <div class="certification-item">
@@ -375,7 +374,6 @@
                             <div class="certification-image" style="background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg')"></div>
                             <h3>Spring Framework Developer</h3>
                             <p>VMware Tanzu</p>
-                            <div class="certification-date">2023</div>
                         </div>
                     </div>
                     <div class="certification-item">
@@ -383,7 +381,6 @@
                             <div class="certification-image" style="background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg')"></div>
                             <h3>React Developer</h3>
                             <p>Meta</p>
-                            <div class="certification-date">2022</div>
                         </div>
                     </div>
                     <div class="certification-item">
@@ -391,7 +388,6 @@
                             <div class="certification-image" style="background-image: url('assets/aws.png')"></div>
                             <h3>AWS Certified Solutions Architect</h3>
                             <p>Amazon Web Services</p>
-                            <div class="certification-date">2023</div>
                         </div>
                     </div>
                     <div class="certification-item">
@@ -399,7 +395,6 @@
                             <div class="certification-image" style="background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg')"></div>
                             <h3>Docker Certified Associate</h3>
                             <p>Docker, Inc.</p>
-                            <div class="certification-date">2022</div>
                         </div>
                     </div>
                     <div class="certification-item">
@@ -407,7 +402,6 @@
                             <div class="certification-image" style="background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg')"></div>
                             <h3>Certified Kubernetes Administrator</h3>
                             <p>Cloud Native Computing Foundation</p>
-                            <div class="certification-date">2023</div>
                         </div>
                     </div>
                     <div class="certification-item">
@@ -415,7 +409,6 @@
                             <div class="certification-image" style="background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg')"></div>
                             <h3>JavaScript Developer</h3>
                             <p>freeCodeCamp</p>
-                            <div class="certification-date">2021</div>
                         </div>
                     </div>
                     <div class="certification-item">
@@ -423,7 +416,6 @@
                             <div class="certification-image" style="background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg')"></div>
                             <h3>TypeScript Professional</h3>
                             <p>Microsoft</p>
-                            <div class="certification-date">2022</div>
                         </div>
                     </div>
 
@@ -433,7 +425,6 @@
                             <div class="certification-image" style="background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg')"></div>
                             <h3>Java Certified Professional</h3>
                             <p>Oracle Corporation</p>
-                            <div class="certification-date">2023</div>
                         </div>
                     </div>
                     <div class="certification-item">
@@ -441,7 +432,6 @@
                             <div class="certification-image" style="background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg')"></div>
                             <h3>Spring Framework Developer</h3>
                             <p>VMware Tanzu</p>
-                            <div class="certification-date">2023</div>
                         </div>
                     </div>
                     <div class="certification-item">
@@ -449,7 +439,6 @@
                             <div class="certification-image" style="background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg')"></div>
                             <h3>React Developer</h3>
                             <p>Meta</p>
-                            <div class="certification-date">2022</div>
                         </div>
                     </div>
                     <div class="certification-item">
@@ -457,7 +446,6 @@
                             <div class="certification-image" style="background-image: url('assets/aws.png')"></div>
                             <h3>AWS Certified Solutions Architect</h3>
                             <p>Amazon Web Services</p>
-                            <div class="certification-date">2023</div>
                         </div>
                     </div>
                     <div class="certification-item">
@@ -465,7 +453,6 @@
                             <div class="certification-image" style="background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg')"></div>
                             <h3>Docker Certified Associate</h3>
                             <p>Docker, Inc.</p>
-                            <div class="certification-date">2022</div>
                         </div>
                     </div>
                     <div class="certification-item">
@@ -473,7 +460,6 @@
                             <div class="certification-image" style="background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg')"></div>
                             <h3>Certified Kubernetes Administrator</h3>
                             <p>Cloud Native Computing Foundation</p>
-                            <div class="certification-date">2023</div>
                         </div>
                     </div>
                 </div>
@@ -563,6 +549,41 @@
                     <h3>Google Cloud Professional</h3>
                     <p>Google Cloud</p>
                     <div class="certification-date">2023</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certification Item Modal -->
+    <div id="certification-detail-modal" class="modal">
+        <div class="modal-content certification-detail-content">
+            <span class="close-modal">&times;</span>
+            <div class="certification-detail-container">
+                <div class="certification-detail-image-container">
+                    <div class="certification-detail-image" id="modal-certification-image"></div>
+                </div>
+                <div class="certification-detail-info">
+                    <h2 id="modal-certification-title">Certification Title</h2>
+                    <p class="certification-issuer" id="modal-certification-issuer">Issuing Organization</p>
+                    <div class="certification-date" id="modal-certification-date">2023</div>
+                    <div class="certification-description" id="modal-certification-description">
+                        <h3>About this Certification</h3>
+                        <p>Detailed description of the certification will appear here. This includes information about what skills are certified, the examination process, and what the certification represents in the industry.</p>
+                    </div>
+                    <div class="certification-skills">
+                        <h3>Skills Verified</h3>
+                        <ul id="modal-certification-skills">
+                            <li>Skill 1</li>
+                            <li>Skill 2</li>
+                            <li>Skill 3</li>
+                        </ul>
+                    </div>
+                    <div class="certification-validity">
+                        <p id="modal-certification-validity">Valid until: December 2025</p>
+                    </div>
+                    <div class="certification-actions">
+                        <button class="btn primary-btn" id="view-credential-btn">View Credential</button>
+                    </div>
                 </div>
             </div>
         </div>
