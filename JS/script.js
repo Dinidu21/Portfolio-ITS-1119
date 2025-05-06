@@ -318,7 +318,6 @@ function certifications(){
 }
 
 function initializeCertificationDetailModal() {
-    // Certification details modal
     const detailModal = document.getElementById('certification-detail-modal');
     const closeDetailModal = detailModal.querySelector('.close-modal');
     const modalImage = document.getElementById('modal-certification-image');
@@ -330,116 +329,115 @@ function initializeCertificationDetailModal() {
     const modalValidity = document.getElementById('modal-certification-validity');
     const viewCredentialBtn = document.getElementById('view-credential-btn');
 
-    // Certification data - This would ideally come from a database or API
-    // For now, we'll use a static object with details for each certification
+    // Certification data
     const certificationDetails = {
-        'Java Certified Professional': {
+        'Oracle Certified Foundations Associate': {
             issuer: 'Oracle Corporation',
-            date: '2023',
-            image: 'assets/cert/cert1.png',
-            description: 'The Oracle Certified Professional Java SE certification validates programming knowledge of the Java language, including object-oriented concepts, database connectivity, and application development.',
-            skills: ['Java SE', 'Object-Oriented Programming', 'API Development', 'Database Connectivity', 'Concurrency'],
-            validity: 'Valid until: December 2026',
-            credentialUrl: '#'
+            date: '2025-02-28',
+            image: 'assets/cert/oracle_cert.png',
+            description: 'The Oracle Certified Foundations Associate certification recognizes foundational knowledge and skills in Oracle technologies.',
+            skills: ['Oracle Technologies', 'Database Fundamentals', 'SQL', 'Cloud Basics'],
+            validity: '2029-02-28',
+            credentialUrl: 'assets/cert/oracle_cert.png'
         },
-        'Spring Framework Developer': {
-            issuer: 'VMware Tanzu',
-            date: '2023',
-            image: 'assets/cert/cert2.png',
-            description: 'The Spring Professional certification demonstrates ability to develop enterprise applications using Spring Framework, Spring Boot, and related technologies.',
-            skills: ['Spring Framework', 'Spring Boot', 'Dependency Injection', 'AOP', 'Spring Security', 'Spring Data'],
-            validity: 'Valid until: August 2025',
-            credentialUrl: '#'
+        'Introduction to Observability': {
+            issuer: 'Datadog',
+            date: '2025-05-02',
+            image: 'assets/cert/datadog_observability.png',
+            description: 'The Introduction to Observability course completion certificate validates understanding of observability concepts and practices using Datadog tools.',
+            skills: ['Observability', 'Monitoring', 'Logging', 'Tracing', 'Datadog'],
+            validity: '2035-02-28',
+            credentialUrl: 'https://www.datadoghq.com/certification/sizn2kjwye'
         },
-        'React Developer': {
-            issuer: 'Meta',
-            date: '2022',
-            image: 'assets/cert/cert3.png',
-            description: 'The Meta React Developer certification validates proficiency in building user interfaces with React, including state management, hooks, and component architecture.',
-            skills: ['React.js', 'Redux', 'Hooks', 'Component Architecture', 'Frontend Development'],
-            validity: 'Valid until: October 2025',
-            credentialUrl: '#'
+        'Skill Up 3.0 Industry Survival': {
+            issuer: 'Leo Club of IIT',
+            date: '2025-03-09',
+            image: 'assets/cert/skillup_3_0.png',
+            description: 'The Skill Up 3.0 Industry Survival certificate acknowledges participation in phases covering student support, panel discussions, and industry survival workshops.',
+            skills: ['Industry Readiness', 'Professional Growth', 'Networking', 'Technical Skills'],
+            validity: 'Not specified',
+            credentialUrl: 'assets/cert/skillup_3_0.png'
         },
-        'AWS Certified Solutions Architect': {
-            issuer: 'Amazon Web Services',
-            date: '2023',
-            image: 'assets/cert/cert4.png',
-            description: 'The AWS Certified Solutions Architect certification validates expertise in designing distributed applications and systems on the AWS platform.',
-            skills: ['AWS', 'Cloud Architecture', 'Security', 'Networking', 'Database Design', 'Cost Optimization'],
-            validity: 'Valid until: March 2026',
-            credentialUrl: '#'
+        'Problem Solving (Basic)': {
+            issuer: 'HackerRank',
+            date: '2024-09-18',
+            image: 'assets/cert/hackerrank_problem_solving.png',
+            description: 'The HackerRank Problem Solving (Basic) certification validates skills in solving basic algorithmic problems.',
+            skills: ['Problem Solving', 'Algorithms', 'Data Structures', 'Coding'],
+            validity: '2032-02-28',
+            credentialUrl: 'assets/cert/hackerrank_problem_solving.png'
         },
-        'Docker Certified Associate': {
-            issuer: 'Docker, Inc.',
-            date: '2022',
-            image: 'assets/cert/img.png',
-            description: 'The Docker Certified Associate (DCA) certification validates your ability to deploy, manage, and troubleshoot Docker container environments.',
-            skills: ['Docker', 'Containerization', 'Docker Compose', 'Docker Swarm', 'Image Management'],
-            validity: 'Valid until: November 2025',
-            credentialUrl: '#'
+        'Python (Basic)': {
+            issuer: 'HackerRank',
+            date: '2024-09-21',
+            image: 'assets/cert/hackerrank_python.png',
+            description: 'The HackerRank Python (Basic) certification validates proficiency in basic Python programming concepts.',
+            skills: ['Python', 'Basic Programming', 'Data Structures', 'Control Flow'],
+            validity: '2035-02-28',
+            credentialUrl: 'assets/cert/hackerrank_python.png'
         },
-        'Certified Kubernetes Administrator': {
-            issuer: 'Cloud Native Computing Foundation',
-            date: '2023',
-            image: 'assets/cert/img_1.png',
-            description: 'The Certified Kubernetes Administrator (CKA) certification demonstrates proficiency in operating Kubernetes clusters and containerized applications.',
-            skills: ['Kubernetes', 'Container Orchestration', 'Cluster Management', 'Security', 'Networking', 'Troubleshooting'],
-            validity: 'Valid until: July 2026',
-            credentialUrl: '#'
+        'Java (Basic)': {
+            issuer: 'HackerRank',
+            date: '2024-08-03',
+            image: 'assets/cert/hackerrank_java.png',
+            description: 'The HackerRank Java (Basic) certification validates proficiency in basic Java programming concepts.',
+            skills: ['Java', 'Basic Programming', 'Object-Oriented Programming', 'Control Flow'],
+            validity: '2029-02-28',
+            credentialUrl: 'assets/cert/hackerrank_java.png'
         },
-        'JavaScript Developer': {
-            issuer: 'freeCodeCamp',
-            date: '2021',
-            image: 'assets/cert/img_2.png',
-            description: 'The JavaScript Developer certification validates proficiency in using JavaScript for web development, including ES6+ features, asynchronous programming, and DOM manipulation.',
-            skills: ['JavaScript', 'ES6+', 'Async/Await', 'DOM Manipulation', 'Web APIs'],
-            validity: 'No expiration date',
-            credentialUrl: '#'
+        'Introduction to Python': {
+            issuer: 'Sololearn',
+            date: '2024-06-30',
+            image: 'assets/cert/sololearn_python.png',
+            description: 'The Sololearn Introduction to Python course completion certificate validates theoretical and practical understanding of Python programming.',
+            skills: ['Python', 'Basic Programming', 'Functions', 'Loops', 'Data Structures'],
+            validity: '2028-02-28',
+            credentialUrl: 'https://www.sololearn.com/certificates/CC-GHO0UT9'
         },
-        'TypeScript Professional': {
+        'Deploy Apps on Azure App Service': {
             issuer: 'Microsoft',
-            date: '2022',
-            image: 'assets/cert/img_3.png',
-            description: 'The TypeScript Professional certification validates expertise in using TypeScript for building large-scale applications with strong typing systems.',
-            skills: ['TypeScript', 'Type Systems', 'Interfaces', 'Generics', 'Advanced Types'],
-            validity: 'Valid until: September 2025',
-            credentialUrl: '#'
+            date: '2025-03-28',
+            image: 'assets/cert/microsoft_azure.png',
+            description: 'The Microsoft Learn Student Ambassador certificate recognizes attendance and completion of a workshop on deploying apps on Azure App Service.',
+            skills: ['Azure', 'App Deployment', 'Cloud Computing', 'Web Applications'],
+            validity: '2027-02-28',
+            credentialUrl: 'assets/cert/microsoft_azure.png'
         },
-        'Node.js Developer': {
-            issuer: 'OpenJS Foundation',
-            date: '2022',
-            image: 'assets/cert/img_4.png',
-            description: 'The Node.js Developer certification demonstrates proficiency in building server-side applications using Node.js and related technologies.',
-            skills: ['Node.js', 'Express.js', 'RESTful APIs', 'Asynchronous Programming', 'NPM'],
-            validity: 'Valid until: May 2025',
-            credentialUrl: '#'
+        'CodeRally 5.0': {
+            issuer: 'IEEE Computer Society Informatics Institute of Technology Student Branch',
+            date: '2024-09-15',
+            image: 'assets/cert/coderally_5_0.png',
+            description: 'The CodeRally 5.0 certificate acknowledges participation in a 24-hour competitive programming hackathon.',
+            skills: ['Competitive Programming', 'Problem Solving', 'Teamwork', 'Coding'],
+            validity: '2027-02-28',
+            credentialUrl: 'assets/cert/coderally_5_0.png'
         },
-        'MongoDB Developer': {
-            issuer: 'MongoDB University',
-            date: '2022',
-            image: 'assets/cert/img_5.png',
-            description: 'The MongoDB Developer certification validates skills in working with MongoDB databases, including data modeling, querying, and optimization.',
-            skills: ['MongoDB', 'NoSQL', 'Data Modeling', 'Aggregation', 'Performance Tuning'],
-            validity: 'Valid until: December 2025',
-            credentialUrl: '#'
+        'Fintech: An Introduction to Financial Technology': {
+            issuer: 'Association of Computing Students, University of Sri Jayewardenepura',
+            date: '2025-04-07',
+            image: 'assets/cert/techxplore_fintech.png',
+            description: 'The TechXplore Edition 1.0 certificate acknowledges participation in a session on Fintech and its applications.',
+            skills: ['Fintech', 'Financial Technology', 'Innovation', 'Digital Payments'],
+            validity: '2027-02-28',
+            credentialUrl: 'assets/cert/techxplore_fintech.png'
         },
-        'Python Developer': {
-            issuer: 'Python Institute',
-            date: '2021',
-            image: 'assets/cert/img_6.png',
-            description: 'The Python Developer certification demonstrates proficiency in Python programming, including core language features, data structures, and common libraries.',
-            skills: ['Python', 'OOP', 'Data Analysis', 'Web Development', 'Automation'],
-            validity: 'Valid until: April 2024',
-            credentialUrl: '#'
+        'Postman API Fundamentals Student Expert': {
+            issuer: 'Postman',
+            date: '2023-12-09',
+            image: 'assets/cert/postman_api_student_expert.png',
+            description: 'The Postman API Fundamentals Student Expert certification validates proficiency in consuming APIs using Postman, including making various HTTP requests and understanding API concepts.',
+            skills: ['API', 'Postman', 'Testing', 'Scripting', 'HTTP Requests'],
+            validity: '2027-05-06',
+            credentialUrl: 'assets/cert/postman_api_student_expert.png'
         },
-        'Google Cloud Professional': {
-            issuer: 'Google Cloud',
-            date: '2023',
-            image: 'assets/cert/mora.jpg',
-            description: 'The Google Cloud Professional certification validates expertise in designing, developing, and managing applications on Google Cloud Platform.',
-            skills: ['Google Cloud', 'Cloud Infrastructure', 'App Engine', 'Kubernetes Engine', 'BigQuery', 'Cloud Storage'],
-            validity: 'Valid until: October 2026',
-            credentialUrl: '#'
+        'Python for Beginners': {
+            issuer: 'University of Moratuwa',
+            date: '2023-12-15',
+            image: 'assets/cert/python_for_beginners_moratuwa.png',
+            description: 'The Python for Beginners certificate from the University of Moratuwa acknowledges participation in an online learning program focused on Python programming fundamentals.',
+            skills: ['Python', 'Basic Programming', 'Functions', 'Loops', 'Data Structures'],
+            validity: '2027-12-15',
+            credentialUrl: 'https://open.uom.lk/verify'
         }
     };
 
@@ -485,8 +483,8 @@ function initializeCertificationDetailModal() {
                 li.textContent = skill;
                 modalSkills.appendChild(li);
             });
-
-            modalValidity.textContent = certData.validity;
+            modalValidity.textContent = `Valid until: ${certData.validity || 'Not specified'}`;
+            viewCredentialBtn.onclick = () => window.open(certData.credentialUrl, '_blank');
 
             // Set up credential button
             viewCredentialBtn.onclick = function() {
@@ -495,26 +493,23 @@ function initializeCertificationDetailModal() {
 
             // Show the modal
             detailModal.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Prevent scrolling behind modal
+            document.body.style.overflow = 'hidden';
         }
     }
 
-    // Close modal functionality
-    closeDetailModal.addEventListener('click', function() {
+    closeDetailModal.addEventListener('click', () => {
         detailModal.classList.remove('active');
-        document.body.style.overflow = ''; // Restore scrolling
+        document.body.style.overflow = '';
     });
 
-    // Close modal if clicking outside of content
-    detailModal.addEventListener('click', function(event) {
+    detailModal.addEventListener('click', (event) => {
         if (event.target === detailModal) {
             detailModal.classList.remove('active');
             document.body.style.overflow = '';
         }
     });
 
-    // Close modal with Escape key
-    document.addEventListener('keydown', function(event) {
+    document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape' && detailModal.classList.contains('active')) {
             detailModal.classList.remove('active');
             document.body.style.overflow = '';
@@ -527,13 +522,7 @@ function initializeCertificationDetailModal() {
     // Set up a mutation observer to add click events to dynamically added certification items
     const certificationContainer = document.querySelector('.certifications-container');
     if (certificationContainer) {
-        const observer = new MutationObserver(function(mutations) {
-            addClickEvents();
-        });
-
-        observer.observe(certificationContainer, {
-            childList: true,
-            subtree: true
-        });
+        const observer = new MutationObserver(() => addClickEvents());
+        observer.observe(certificationContainer, { childList: true, subtree: true });
     }
 }
