@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSidebarToggle();
     certifications();
     initializeCertificationDetailModal();
+    initBadgeRainAnimation();
 });
 
 /** === INTERSECTION OBSERVER FOR ANIMATIONS === **/
@@ -412,8 +413,8 @@ function initializeCertificationDetailModal() {
             validity: '2027-02-28',
             credentialUrl: 'assets/cert/coderally_5_0.png'
         },
-        'Fintech: An Introduction to Financial Technology': {
-            issuer: 'Association of Computing Students, University of Sri Jayewardenepura',
+        'An Introduction to Financial Technology': {
+            issuer: 'University of Sri Jayewardenepura',
             date: '2025-04-07',
             image: 'assets/cert/techxplore_fintech.png',
             description: 'The TechXplore Edition 1.0 certificate acknowledges participation in a session on Fintech and its applications.',
@@ -437,7 +438,7 @@ function initializeCertificationDetailModal() {
             description: 'The Python for Beginners certificate from the University of Moratuwa acknowledges participation in an online learning program focused on Python programming fundamentals.',
             skills: ['Python', 'Basic Programming', 'Functions', 'Loops', 'Data Structures'],
             validity: '2027-12-15',
-            credentialUrl: 'https://open.uom.lk/verify'
+            credentialUrl: 'assets/cert/python_for_beginners_moratuwa.png'
         }
     };
 
@@ -524,5 +525,51 @@ function initializeCertificationDetailModal() {
     if (certificationContainer) {
         const observer = new MutationObserver(() => addClickEvents());
         observer.observe(certificationContainer, { childList: true, subtree: true });
+    }
+}
+
+function initBadgeRainAnimation() {
+    const achievementsSection = document.getElementById('achievements');
+    const badgeRainContainer = document.getElementById('badge-rain-container');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Start badge raining animation
+                startBadgeRain(badgeRainContainer);
+                // Stop observing after animation starts (one-time effect)
+                observer.unobserve(achievementsSection);
+            }
+        });
+    }, { threshold: 0.3 }); // Trigger when 30% of the section is visible
+
+    observer.observe(achievementsSection);
+}
+
+function startBadgeRain(container) {
+    const badgeTypes = [
+        { src: 'assets/badges/hackerrank-java-gold.png', alt: 'Java Gold Badge' },
+        { src: 'assets/badges/hackerrank-problem-solving-silver.png', alt: 'Problem Solving Silver Badge' }
+    ];
+
+    // Create 10 badge elements to rain down
+    for (let i = 0; i < 10; i++) {
+        const badge = document.createElement('img');
+        const badgeType = badgeTypes[i % badgeTypes.length]; // Alternate between badge types
+        badge.src = badgeType.src;
+        badge.alt = badgeType.alt;
+        badge.classList.add('raining-badge');
+
+        // Randomize starting position and animation delay
+        badge.style.left = `${Math.random() * 100}%`; // Random horizontal position
+        badge.style.animationDelay = `${Math.random() * 2}s`; // Random delay up to 2 seconds
+        badge.style.animationDuration = `${3 + Math.random() * 2}s`; // Random duration between 3-5 seconds
+
+        container.appendChild(badge);
+
+        // Remove badge after animation completes to prevent DOM clutter
+        badge.addEventListener('animationend', () => {
+            badge.remove();
+        });
     }
 }
