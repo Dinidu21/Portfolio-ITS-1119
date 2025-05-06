@@ -336,7 +336,7 @@ function initializeCertificationDetailModal() {
         'Java Certified Professional': {
             issuer: 'Oracle Corporation',
             date: '2023',
-            image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
+            image: 'assets/cert/cert1.png',
             description: 'The Oracle Certified Professional Java SE certification validates programming knowledge of the Java language, including object-oriented concepts, database connectivity, and application development.',
             skills: ['Java SE', 'Object-Oriented Programming', 'API Development', 'Database Connectivity', 'Concurrency'],
             validity: 'Valid until: December 2026',
@@ -345,7 +345,7 @@ function initializeCertificationDetailModal() {
         'Spring Framework Developer': {
             issuer: 'VMware Tanzu',
             date: '2023',
-            image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg',
+            image: 'assets/cert/cert2.png',
             description: 'The Spring Professional certification demonstrates ability to develop enterprise applications using Spring Framework, Spring Boot, and related technologies.',
             skills: ['Spring Framework', 'Spring Boot', 'Dependency Injection', 'AOP', 'Spring Security', 'Spring Data'],
             validity: 'Valid until: August 2025',
@@ -354,7 +354,7 @@ function initializeCertificationDetailModal() {
         'React Developer': {
             issuer: 'Meta',
             date: '2022',
-            image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+            image: 'assets/cert/cert3.png',
             description: 'The Meta React Developer certification validates proficiency in building user interfaces with React, including state management, hooks, and component architecture.',
             skills: ['React.js', 'Redux', 'Hooks', 'Component Architecture', 'Frontend Development'],
             validity: 'Valid until: October 2025',
@@ -363,7 +363,7 @@ function initializeCertificationDetailModal() {
         'AWS Certified Solutions Architect': {
             issuer: 'Amazon Web Services',
             date: '2023',
-            image: 'assets/aws.png',
+            image: 'assets/cert/cert4.png',
             description: 'The AWS Certified Solutions Architect certification validates expertise in designing distributed applications and systems on the AWS platform.',
             skills: ['AWS', 'Cloud Architecture', 'Security', 'Networking', 'Database Design', 'Cost Optimization'],
             validity: 'Valid until: March 2026',
@@ -372,7 +372,7 @@ function initializeCertificationDetailModal() {
         'Docker Certified Associate': {
             issuer: 'Docker, Inc.',
             date: '2022',
-            image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
+            image: 'assets/cert/img.png',
             description: 'The Docker Certified Associate (DCA) certification validates your ability to deploy, manage, and troubleshoot Docker container environments.',
             skills: ['Docker', 'Containerization', 'Docker Compose', 'Docker Swarm', 'Image Management'],
             validity: 'Valid until: November 2025',
@@ -381,7 +381,7 @@ function initializeCertificationDetailModal() {
         'Certified Kubernetes Administrator': {
             issuer: 'Cloud Native Computing Foundation',
             date: '2023',
-            image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg',
+            image: 'assets/cert/img_1.png',
             description: 'The Certified Kubernetes Administrator (CKA) certification demonstrates proficiency in operating Kubernetes clusters and containerized applications.',
             skills: ['Kubernetes', 'Container Orchestration', 'Cluster Management', 'Security', 'Networking', 'Troubleshooting'],
             validity: 'Valid until: July 2026',
@@ -390,7 +390,7 @@ function initializeCertificationDetailModal() {
         'JavaScript Developer': {
             issuer: 'freeCodeCamp',
             date: '2021',
-            image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+            image: 'assets/cert/img_2.png',
             description: 'The JavaScript Developer certification validates proficiency in using JavaScript for web development, including ES6+ features, asynchronous programming, and DOM manipulation.',
             skills: ['JavaScript', 'ES6+', 'Async/Await', 'DOM Manipulation', 'Web APIs'],
             validity: 'No expiration date',
@@ -399,7 +399,7 @@ function initializeCertificationDetailModal() {
         'TypeScript Professional': {
             issuer: 'Microsoft',
             date: '2022',
-            image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+            image: 'assets/cert/img_3.png',
             description: 'The TypeScript Professional certification validates expertise in using TypeScript for building large-scale applications with strong typing systems.',
             skills: ['TypeScript', 'Type Systems', 'Interfaces', 'Generics', 'Advanced Types'],
             validity: 'Valid until: September 2025',
@@ -408,7 +408,7 @@ function initializeCertificationDetailModal() {
         'Node.js Developer': {
             issuer: 'OpenJS Foundation',
             date: '2022',
-            image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+            image: 'assets/cert/img_4.png',
             description: 'The Node.js Developer certification demonstrates proficiency in building server-side applications using Node.js and related technologies.',
             skills: ['Node.js', 'Express.js', 'RESTful APIs', 'Asynchronous Programming', 'NPM'],
             validity: 'Valid until: May 2025',
@@ -417,7 +417,7 @@ function initializeCertificationDetailModal() {
         'MongoDB Developer': {
             issuer: 'MongoDB University',
             date: '2022',
-            image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+            image: 'assets/cert/img_5.png',
             description: 'The MongoDB Developer certification validates skills in working with MongoDB databases, including data modeling, querying, and optimization.',
             skills: ['MongoDB', 'NoSQL', 'Data Modeling', 'Aggregation', 'Performance Tuning'],
             validity: 'Valid until: December 2025',
@@ -426,7 +426,7 @@ function initializeCertificationDetailModal() {
         'Python Developer': {
             issuer: 'Python Institute',
             date: '2021',
-            image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+            image: 'assets/cert/img_6.png',
             description: 'The Python Developer certification demonstrates proficiency in Python programming, including core language features, data structures, and common libraries.',
             skills: ['Python', 'OOP', 'Data Analysis', 'Web Development', 'Automation'],
             validity: 'Valid until: April 2024',
@@ -435,7 +435,7 @@ function initializeCertificationDetailModal() {
         'Google Cloud Professional': {
             issuer: 'Google Cloud',
             date: '2023',
-            image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg',
+            image: 'assets/cert/mora.jpg',
             description: 'The Google Cloud Professional certification validates expertise in designing, developing, and managing applications on Google Cloud Platform.',
             skills: ['Google Cloud', 'Cloud Infrastructure', 'App Engine', 'Kubernetes Engine', 'BigQuery', 'Cloud Storage'],
             validity: 'Valid until: October 2026',
