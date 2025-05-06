@@ -49,7 +49,7 @@ function initPreloader() {
     window.addEventListener('load', () => {
         setTimeout(() => {
             document.getElementById('preloader')?.classList.add('hidden');
-        }, 500);
+        }, 300);
     });
 }
 
