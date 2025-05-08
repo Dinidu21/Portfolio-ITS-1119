@@ -1,5 +1,5 @@
 :root {
-    --bg-color: #f8f9fa;
+    --bg-color: #feffff;
     --card-bg-color: #ffffff;
     --accent-color: #4a6cf7;
     --text-color: #121111;
@@ -46,7 +46,7 @@ body::before {
 :root {
     --primary: #3b82f6;
     --accent: #ec4899;
-    --bg-light: #f9fafb;
+    --bg-light: #feffff;
     --bg-dark: #000000;
     --text-light: #000000;
     --text-dark: #d1d5db;
@@ -141,12 +141,19 @@ section {
 .dark-mode .navbar {
     background: rgba(42, 46, 53, 0.9);
 }
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
 .navbar-brand {
     font-size: 1.55rem;
     font-weight: 1000;
     color: var(--primary);
     text-decoration: none;
-    padding: 0.5rem 0;
 }
 .navbar-brand:hover {
     color: rgba(251, 121, 38, 0.84);
@@ -215,7 +222,7 @@ section {
     border-radius: 5px;
 }
 .dark-mode-btn {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.75rem;
     border: 1px solid #333;
     border-radius: 20px;
     background: none;
